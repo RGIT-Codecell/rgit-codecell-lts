@@ -8,7 +8,7 @@ import AboutSection from "@/components/sections/recursion-2026/AboutSection";
 import SkillsMarquee from "@/components/sections/recursion-2026/SkillsMarquee";
 import HeroSection from "@/components/sections/recursion-2026/HeroSection";
 import CursorGlow from "@/components/sections/recursion-2026/CursorGlow";
-import { RecursionTimeline } from "@/components/sections/recursion/RecursionTimeline";
+import { Recursion2026Timeline } from "@/components/sections/recursion-2026/Recursion2026Timeline";
 
 
 export default function RecursionPage() {
@@ -20,9 +20,9 @@ export default function RecursionPage() {
             <AboutSection />
             <PrizeSection />
             <RulesSection />
-            <RecursionTimeline />
-            <FAQSection />
+            <Recursion2026Timeline />
             <RegistrationSection />
+            <FAQSection />
             <ContactSection />
         </main>
     );

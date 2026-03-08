@@ -28,9 +28,9 @@ export default function Home() {
           <Button variant="outline" size="lg" className="w-full md:w-auto">
             Explore
           </Button>
-          <Link href="/codertine-25" className="w-full md:w-auto">
+          <Link href="/recursion-2026" className="w-full md:w-auto">
             <Button size="lg" className="w-full md:w-auto">
-              Checkout Codertine 6.0
+              Checkout Recursion 2026
               <ArrowRight className="-rotate-[35deg]" />
             </Button>
           </Link>

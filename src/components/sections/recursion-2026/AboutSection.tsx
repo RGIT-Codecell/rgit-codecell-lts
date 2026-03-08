@@ -51,7 +51,7 @@ const AboutSection = () => {
 
                         <div className="md:flex-1 grid grid-cols-1 gap-4 mt-12 md:mt-0">
                             {[
-                                { l: "Timeline", v: "March 21st, 2026", i: "🗓️" },
+                                { l: "Timeline", v: "March 23rd, 2026", i: "🗓️" },
                                 { l: "Venue", v: "RGIT Campus, Mumbai", i: "📍" },
                                 { l: "Format", v: "Full Day Offline", i: "⏰" },
                             ].map((item) => (

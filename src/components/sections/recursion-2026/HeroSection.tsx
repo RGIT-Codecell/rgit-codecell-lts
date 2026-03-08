@@ -150,7 +150,7 @@ const HeroSection = () => {
                         <div className="glass-card p-6 md:p-8 border-white/5 bg-white/[0.01] ring-1 ring-white/5">
                             <p className="text-[13px] md:text-sm text-white/40 leading-relaxed font-medium">
                                 Benchmark your abilities in one day of high-stakes technical evolution.
-                                Massive <span className="text-white font-bold block mt-1 glow-text-purple">₹4,00,000</span> prize pool awaits.
+                                Massive <span className="text-white font-bold block mt-1 glow-text-purple">₹5,00,000</span> prize pool awaits.
                             </p>
                             <div className="mt-6 flex flex-col gap-3">
                                 <Magnetic>
