@@ -20,9 +20,15 @@ All website content can be modified by editing the TypeScript files located in:
 
 ## Contributing
 
-Make sure to create a branch before making any changes, naming convention: `<username>/<feature-you-working-on>`.
+Make sure to create a branch before making any changes, naming convention: 
+`<username>/<feature-you-working-on>`
 Ex: `DhruvLohar/create-recursion-page-2025`
 >Merge the branch into `main` only when reviewed and completed the feature.
+
+## Upgrading
+
+Use the following command to upgrade Next.js to the latest version:
+`npx @next/codemod@canary upgrade latest`
 
 ## Developer
 
