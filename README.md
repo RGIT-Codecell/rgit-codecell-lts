@@ -20,10 +20,16 @@ All website content can be modified by editing the TypeScript files located in:
 
 ## Contributing
 
-Make sure to create a branch before making any changes, naming convention: 
+#### Make sure to create a branch before making any changes, naming convention: 
 `<username>/<feature-you-working-on>`
 Ex: `DhruvLohar/create-recursion-page-2025`
 >Merge the branch into `main` only when reviewed and completed the feature.
+
+#### Push your changes with proper commit messages and use the following prefixes for commit messages:
+- feat: new feature
+- fix: bug fix
+- docs: documentation changes
+- chore: other changes
 
 ## Upgrading
 
@@ -33,9 +39,3 @@ Use the following command to upgrade Next.js to the latest version:
 ## Developer
 
 Developed by [Dhruv Lohar](https://github.com/DhruvLohar) and [Nandani Kadave](https://github.com/Nandanikadave) 
-
-## Vercel Deployments
-- SIH poster fixes
-- UI Fix on SIH-2025 page
-- Poster Fix for SIH 25 page
-- Add contact queries for codertine
