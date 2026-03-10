@@ -31,9 +31,9 @@ const ContactSection = () => {
 
 
     const contacts = [
-        { role: "Event Lead", name: "Sahil", phone: "+91 98765 43210", email: "rahul@rgitcodecell.in" },
-        { role: "Tech Bridge", name: "Yashraj", phone: "+91 87654 32109", email: "priya@rgitcodecell.in" },
-        { role: "Admin Desk", name: "Dhirendra", phone: "+91 76543 21098", email: "pr@rgitcodecell.in" },
+        { role: "Event Lead", name: "Sahil", phone: "+91 96070 55655", email: "rgitcodecell@gmail.com" },
+        { role: "Tech Bridge", name: "Dhruv", phone: "+91 9321781063", email: "rgitcodecell@gmail.com" },
+        { role: "Admin Desk", name: "Harsh", phone: "+91 74001 00862", email: "rgitcodecell@gmail.com" },
     ];
     return (
         <section id="contact" className="bg-neutral-950 py-24 px-6 md:px-12 border-t border-white/5">

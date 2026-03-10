@@ -61,7 +61,7 @@ const PrizeSection = () => {
             <div className="relative bg-neutral-900/30 flex flex-col md:flex-row items-center p-5 rounded-xl border border-white/5 hover:border-white/20 transition-all">
                 <div className="flex items-center justify-between w-full md:w-auto md:min-w-[140px] md:border-r border-white/5 md:pr-6">
                     <span className="text-white font-black text-xl">{amount}</span>
-                    <span className="text-[10px] font-black text-emerald-500 tracking-tighter ml-2">CASH</span>
+                    <span className="text-[10px] font-black text-emerald-500 tracking-tighter ml-2">Voucher</span>
                 </div>
                 <div className="flex-1 md:pl-6 mt-3 md:mt-0 flex items-center gap-4 w-full">
                     <Icon className="w-4 h-4 text-white/40" />
@@ -123,6 +123,7 @@ const PrizeSection = () => {
                         <CategoryRow title="Best Use of Technology" amount="₹10,000" icon={Lightbulb} />
                     </Fade>
                 </div>
+
             </div>
         </section>
     );
