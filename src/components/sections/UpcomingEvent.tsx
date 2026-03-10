@@ -21,7 +21,7 @@ export default function UpcomingEvent() {
             </div>
 
             {/* Left Side */}
-            <aside className="w-full md:w-1/2 flex flex-col items-start justify-center ml-20 py-8 md:py-0">
+            <aside className="w-full md:w-1/2 ml-20 flex flex-col items-start justify-center ml-20 py-8 md:py-0">
                 <span className="text-md font-semibold text-gray-500 mb-3">
                     UPCOMING EVENT
                 </span>
