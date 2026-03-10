@@ -25,9 +25,11 @@ export default function Home() {
         </h1>
 
         <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-4 mt-10 w-full">
-          <Button variant="outline" size="lg" className="w-full md:w-auto">
-            Explore
-          </Button>
+          <Link href="/events" className="w-full md:w-auto">
+            <Button variant="outline" size="lg" className="w-full md:w-auto">
+              Explore
+            </Button>
+          </Link>
           <Link href="/recursion-2026" className="w-full md:w-auto">
             <Button size="lg" className="w-full md:w-auto">
               Checkout Recursion 7.0
