@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SkillsMarquee = () => {
-    const items = ["Web Development", "AI / ML", "Web Development", "AI / ML", "Web Development", "AI / ML", "Web Development", "AI / ML",];
+    const items = ["Web & App Development", "AI / Machine Learning", "Blockchain", "Web & App Development", "AI / Machine Learning", "Blockchain", "Web & App Development", "AI / Machine Learning", "Blockchain"];
     return (
         <div className="py-10 bg-neutral-950 border-y border-white/5 overflow-hidden">
             <h1 className=' font-porticoRough text-5xl font-bold text-center pb-10'>Domains</h1>
