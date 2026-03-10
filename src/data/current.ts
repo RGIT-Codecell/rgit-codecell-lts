@@ -13,17 +13,28 @@ export const UPCOMING_EVENT = {
     // description: [
     //     '⭐Smart India Hackathon 2025 is a nationwide initiative to provide students a platform to solve some of the pressing problems we face in our daily lives⭐'
     // ],
-    // date: "15th September, 2025",
-    url: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1759581343/codertine6_tcst6x.jpg",
-    title: "Codertine 25",
+    // // date: "15th September, 2025",
+    // url: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1759581343/codertine6_tcst6x.jpg",
+    // title: "Codertine 25",
+    // description: [
+    //     `CODERTINE 25 is the pinnacle of inter-college competitive
+    //     programming, born from a collaboration between RGIT Codecell and
+    //     RGIT CESS. Our mission is to provide a premier platform for
+    //     students to showcase their mastery of Data Structures and
+    //     Algorithms.`
+    // ],
+    // time: "12:00 PM Onwards",
+    // date: "4th October, 2025",
+    // register: 'https://www.rgitcodecell.in/codertine-25',
+
+    // url: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1759581343/codertine6_tcst6x.jpg",
+    url: "recursion/Recursion-poster.png",
+    title: "Recursion 7.0",
     description: [
-        `CODERTINE 25 is the pinnacle of inter-college competitive
-        programming, born from a collaboration between RGIT Codecell and
-        RGIT CESS. Our mission is to provide a premier platform for
-        students to showcase their mastery of Data Structures and
-        Algorithms.`
+        `Recursion 7.0 is a 24-hour hackathon designed for developers, designers, and tech enthusiasts who want to build innovative solutions using modern technologies. This year’s focus is on AI-powered innovation, encouraging participants to integrate Artificial Intelligence into their projects.`
     ],
-    time: "12:00 PM Onwards",
-    date: "4th October, 2025",
-    register: 'https://www.rgitcodecell.in/codertine-25',
+    time: "10:00 PM Onwards",
+    date: "23rd March, 2025",
+    register: 'https://www.rgitcodecell.in/recursion-2026',
 }
+
