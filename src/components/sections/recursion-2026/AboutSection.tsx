@@ -42,11 +42,7 @@ const AboutSection = () => {
                             </h2>
                             <div className="h-0.5 w-24 bg-gradient-to-r from-purple-500 to-transparent mb-8" />
                             <p className="text-sm md:text-base lg:text-lg text-white/50 leading-relaxed max-w-2xl font-medium">
-                                RECURSION 7.0 is the flagship inter-college technical summit of RGIT Mumbai.
-                                Born from the synergy of RGIT Codecell and RGIT CESS, we provide
-                                a high-stakes arena for students to prove their abilities in
-                                Web Dev, AI/ML, and Competitive Coding.
-                            </p>
+                                Recursion 7.0 is a 24-hour hackathon designed for developers, designers, and tech enthusiasts who want to build innovative solutions using modern technologies. This year’s focus is on AI-powered innovation, encouraging participants to integrate Artificial Intelligence into their projects.                            </p>
                         </div>
 
                         <div className="md:flex-1 grid grid-cols-1 gap-4 mt-12 md:mt-0">

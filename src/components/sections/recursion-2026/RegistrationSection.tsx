@@ -95,7 +95,7 @@ const RegistrationSection = () => {
                         </p>
                         <Magnetic>
                             <a 
-                                href="https://unstop.com" 
+                                href="https://unstop.com/hackathons/recursion-70-rajiv-gandhi-institute-of-technology-mumbai-1656541" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-3 w-full h-14 bg-white text-black text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-blue-50 transition-colors p-2"
