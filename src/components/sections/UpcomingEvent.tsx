@@ -21,7 +21,7 @@ export default function UpcomingEvent() {
             </div>
 
             {/* Left Side */}
-            <aside className="w-full md:w-1/2 flex flex-col items-start justify-center py-8 md:py-0">
+            <aside className="w-full md:w-1/2 flex flex-col items-start justify-center ml-20 py-8 md:py-0">
                 <span className="text-md font-semibold text-gray-500 mb-3">
                     UPCOMING EVENT
                 </span>
@@ -55,7 +55,7 @@ export default function UpcomingEvent() {
                 <img
                     src={UPCOMING_EVENT.url}
                     alt="Upcoming event poster"
-                    className="h-[31rem] w-full object-cover object-top rounded-lg shadow-xl"
+                    className="h-[50rem] w-full object-contain object-top rounded-lg shadow-xl"
                 />
             </aside>
         </section>

@@ -27,7 +27,8 @@ export const UPCOMING_EVENT = {
     // date: "4th October, 2025",
     // register: 'https://www.rgitcodecell.in/codertine-25',
 
-    url: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1759581343/codertine6_tcst6x.jpg",
+    // url: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1759581343/codertine6_tcst6x.jpg",
+    url: "recursion/recursion-poster.PNG",
     title: "Recursion 7.0",
     description: [
         `Recursion 7.0 is a 24-hour hackathon designed for developers, designers, and tech enthusiasts who want to build innovative solutions using modern technologies. This year’s focus is on AI-powered innovation, encouraging participants to integrate Artificial Intelligence into their projects.`
