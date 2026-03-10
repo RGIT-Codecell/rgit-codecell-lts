@@ -17,7 +17,7 @@ export default function Home() {
       <section className="relative flex flex-col items-center justify-center h-screen md:px-12">
 
         <div className="absolute w-[100vw] h-[100vh] z-[-1]">
-          <img src="/recursion-bg.jpg" alt="background" className="rounded-[2rem] inset-0 object-cover w-full h-full" />
+          <video src="https://res.cloudinary.com/dbsohsdkz/video/upload/v1773161767/bg-hero_uqgugx.mp4" autoPlay muted loop playsInline className="rounded-[2rem] inset-0 object-cover w-full h-full" />
         </div>
 
         <h1 className="text-center md:text-5xl text-2xl font-bold md:w-[60%]">

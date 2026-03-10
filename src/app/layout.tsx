@@ -35,9 +35,63 @@ const porticoRoughUrban = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "RGIT Codecell",
+  title: {
+    default: "RGIT Codecell | Coding Committee of Rajiv Gandhi Institute of Technology",
+    template: "%s | RGIT Codecell",
+  },
   description:
-    "Codecell was established in 2019 by a group of budding programmers who envisioned a platform where everyone could join together with like minded people and grow. Despite being a committee that is fairly new compared to many others, we have established a community of over 150 students and conducted our college's first Hackathon in our first year.",
+    "RGIT Codecell is the official coding committee of Rajiv Gandhi Institute of Technology, Mumbai. Established in 2019, we are a 150+ member community hosting hackathons, workshops, and coding events to empower student developers.",
+  keywords: [
+    "RGIT Codecell",
+    "Codecell",
+    "RGIT",
+    "Rajiv Gandhi Institute of Technology",
+    "coding committee",
+    "hackathon",
+    "programming",
+    "Mumbai",
+    "student developers",
+    "tech community",
+    "Recursion",
+  ],
+  authors: [{ name: "RGIT Codecell" }],
+  creator: "RGIT Codecell",
+  metadataBase: new URL("https://rgitcodecell.tech"),
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://rgitcodecell.tech",
+    siteName: "RGIT Codecell",
+    title: "RGIT Codecell | Coding Committee of Rajiv Gandhi Institute of Technology",
+    description:
+      "RGIT Codecell is the official coding committee of Rajiv Gandhi Institute of Technology, Mumbai. Join our 150+ member community of student developers.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "RGIT Codecell",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RGIT Codecell | Coding Committee of RGIT Mumbai",
+    description:
+      "Official coding committee of Rajiv Gandhi Institute of Technology, Mumbai. Hackathons, workshops, and a thriving student developer community.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
