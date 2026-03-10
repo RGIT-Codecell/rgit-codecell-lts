@@ -136,7 +136,7 @@ const HeroSection = () => {
                         <div className="absolute -inset-10 bg-gradient-to-b from-purple-600/10 via-blue-600/5 to-transparent rounded-[50%] blur-3xl pointer-events-none" />
                         <div className="relative overflow-hidden rounded-xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
                             <Image
-                                src="/recursion-bot.png"
+                                src="/recursion/recursion-poster.PNG"
                                 alt="Recursion 7.0"
                                 width={500}
                                 height={700}
