@@ -15,7 +15,7 @@ export function Recursion2026Timeline() {
                         <strong>💻 PPT Solution Phase:</strong> Teams work on and provide solutions for the given problem statements.
                     </p>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-2">
-                        19 Mar 26
+                        18 Mar 26
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         <strong>📩 Final Deadline:</strong> All solutions must be submitted by the end of the day.
@@ -28,7 +28,7 @@ export function Recursion2026Timeline() {
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        21 Mar 26
+                        19 Mar 26
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         📢 <strong>Results:</strong> Shortlisted teams will be officially displayed on the hackathon website. Check your dashboard to see if you qualified for the offline round!

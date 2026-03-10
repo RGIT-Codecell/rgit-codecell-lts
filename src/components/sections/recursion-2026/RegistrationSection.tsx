@@ -76,7 +76,7 @@ const RegistrationSection = () => {
                 <p className="mt-4 text-[10px] tracking-[0.5em] font-black text-purple-500 uppercase">Secure Your Spot in the Grid</p>
             </Fade>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="max-w-4xl mx-auto flex justify-center align-middle items-start">
                 
                 {/* Left Side: Unstop Direct Action */}
                 <Fade className="space-y-8 order-2 lg:order-1">
@@ -118,73 +118,7 @@ const RegistrationSection = () => {
                 </Fade>
 
                 {/* Right Side: Internal Inquiry Form */}
-                <Fade className="order-1 lg:order-2">
-                    {done ? (
-                        <div className="text-center p-12 bg-emerald-500/5 rounded-3xl border border-emerald-500/20 backdrop-blur-xl">
-                            <Zap className="w-12 h-12 mx-auto mb-8 text-emerald-500" />
-                            <h3 className="text-2xl font-black mb-4 uppercase tracking-[0.2em] text-white">Application Received</h3>
-                            <p className="text-white/40 mb-8 font-medium">Check your inbox for validation credentials.</p>
-                            <button 
-                                className="px-8 py-3 bg-white/10 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-white/10 hover:bg-white/20 transition-all" 
-                                onClick={() => setDone(false)}
-                            >
-                                Submit Another Team
-                            </button>
-                        </div>
-                    ) : (
-                        <div className="bg-neutral-900/50 p-8 md:p-10 border border-white/10 rounded-3xl backdrop-blur-xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-10">
-                                <Shield className="w-24 h-24 text-white" />
-                            </div>
-                            <form onSubmit={submit} className="space-y-8 relative z-10">
-                                <div className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label className="flex items-center gap-2 text-[9px] font-black text-white/30 mb-3 uppercase tracking-[0.3em]">
-                                                <Users className="w-3 h-3" /> Lead Catalyst
-                                            </label>
-                                            <input required type="text" placeholder="Full Name" className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-600 focus:bg-white/10 transition-all" />
-                                        </div>
-                                        <div>
-                                            <label className="flex items-center gap-2 text-[9px] font-black text-white/30 mb-3 uppercase tracking-[0.3em]">
-                                                <Mail className="w-3 h-3" /> Email Address
-                                            </label>
-                                            <input required type="email" placeholder="edu@college.com" className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-600 focus:bg-white/10 transition-all" />
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <label className="flex items-center gap-2 text-[9px] font-black text-white/30 mb-3 uppercase tracking-[0.3em]">
-                                            <School className="w-3 h-3" /> Institution
-                                        </label>
-                                        <input required type="text" placeholder="College / University Name" className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-600 focus:bg-white/10 transition-all" />
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label className="text-[9px] font-black text-white/30 mb-3 block uppercase tracking-[0.3em]">Team Name</label>
-                                            <input required type="text" placeholder="Battalion ID" className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-600 focus:bg-white/10 transition-all" />
-                                        </div>
-                                        <div>
-                                            <label className="text-[9px] font-black text-white/30 mb-3 block uppercase tracking-[0.3em]">Team Size</label>
-                                            <select required className="w-full bg-neutral-800 border border-white/5 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-600 transition-all appearance-none">
-                                                <option value="2">2 Members</option>
-                                                <option value="3">3 Members</option>
-                                                <option value="4">4 Members</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <Magnetic>
-                                    <button type="submit" className="w-full h-14 bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-2xl transition-all shadow-lg p-2 shadow-purple-600/20">
-                                        Initialize Participation
-                                    </button>
-                                </Magnetic>
-                            </form>
-                        </div>
-                    )}
-                </Fade>
+              
             </div>
         </section>
     );
