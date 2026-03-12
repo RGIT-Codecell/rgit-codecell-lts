@@ -30,17 +30,17 @@ const AboutSection = () => {
 
 
     return (
-        <section id="about-us" className="relative py-24 px-6 md:px-12 bg-black overflow-hidden">
+        <section id="about-us" className="relative py-24 px-6 md:px-12 bg-transparent overflow-hidden">
             <div className="dots-pattern opacity-30" />
             <div className="max-w-7xl mx-auto relative z-10">
                 <Fade>
                     <div className="flex flex-col md:flex-row md:gap-12 lg:gap-20 items-stretch">
                         <div className="md:flex-[1.5]">
-                            <h3 className="text-[10px] tracking-[0.5em] uppercase text-purple-400 font-bold mb-4">The Benchmark</h3>
-                            <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.9] mb-8 font-porticoRough" >
+                            <h3 className="text-[10px] tracking-[0.5em] uppercase text-tumbbad-blood font-bold mb-4 font-serif">The Benchmark</h3>
+                            <h2 className="text-4xl md:text-6xl font-black text-tumbbad-gold drop-shadow-lg leading-[0.9] mb-8 font-porticoRough" >
                                 ABOUT <br />RECURSION 7.0
                             </h2>
-                            <div className="h-0.5 w-24 bg-gradient-to-r from-purple-500 to-transparent mb-8" />
+                            <div className="h-0.5 w-24 bg-gradient-to-r from-tumbbad-blood to-transparent mb-8" />
                             <p className="text-sm md:text-base lg:text-lg text-white/50 leading-relaxed max-w-2xl font-medium">
                                 Recursion 7.0 is a 24-hour hackathon designed for developers, designers, and tech enthusiasts who want to build innovative solutions using modern technologies. This year’s focus is on AI-powered innovation, encouraging participants to integrate Artificial Intelligence into their projects.                            </p>
                         </div>
@@ -51,11 +51,11 @@ const AboutSection = () => {
                                 { l: "Venue", v: "RGIT Campus, Mumbai", i: "📍" },
                                 { l: "Format", v: "Full Day Offline", i: "⏰" },
                             ].map((item) => (
-                                <div key={item.l} className="glass-card p-6 border-white/5 bg-white/[0.01] hover:border-white/20 transition-all flex items-center gap-4">
+                                <div key={item.l} className="glass-card bg-tumbbad-mud/80 backdrop-blur-md p-6 border border-tumbbad-gold/20 hover:border-tumbbad-gold/50 transition-all flex items-center gap-4">
                                     <span className="text-xl md:text-2xl">{item.i}</span>
                                     <div>
-                                        <p className="text-[8px] tracking-[0.3em] font-black uppercase text-white/30 mb-0.5">{item.l}</p>
-                                        <p className="text-sm md:text-base font-bold text-white uppercase tracking-wider">{item.v}</p>
+                                        <p className="text-[8px] tracking-[0.3em] font-black uppercase text-tumbbad-gold/60 mb-0.5 font-serif">{item.l}</p>
+                                        <p className="text-sm md:text-base font-bold text-gray-200 uppercase tracking-wider">{item.v}</p>
                                     </div>
                                 </div>
                             ))}

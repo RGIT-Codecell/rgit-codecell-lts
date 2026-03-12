@@ -1,62 +1,76 @@
-import { ChevronDown } from 'lucide-react';
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const FAQSection = () => {
+export default function FAQSection() {
+  const faqs = [
+    {
+      question: "What is the team size for Recursion 7.0?",
+      answer: "You can form teams of 2 to 4 members. Lone wolves are not permitted in the descent. You need a crew to survive.",
+    },
+    {
+      question: "Is there any registration fee?",
+      answer: "Check the registration portal for the latest fee structure. The cost of entry is small compared to Hastar's gold.",
+    },
+    {
+      question: "Who can participate?",
+      answer: "Recursion is open to all undergraduate engineering students who have the grit to build under pressure.",
+    },
+    {
+      question: "Will food and internet be provided?",
+      answer: "Yes. High-speed Wi-Fi and survival rations (food and energy drinks) will be provided for the entire 24-hour duration.",
+    },
+  ];
 
-    function Fade({ children, className = "" }: { children: ReactNode; className?: string }) {
-        const ref = useRef<HTMLDivElement>(null);
-        useEffect(() => {
-            const el = ref.current;
-            if (!el) return;
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-            const io = new IntersectionObserver(([e]) => {
-                if (e.isIntersecting) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                    io.unobserve(el);
-                }
-            }, { threshold: 0.1 });
-            io.observe(el);
-            return () => io.disconnect();
-        }, []);
-        return <div ref={ref} className={className}>{children}</div>;
-    }
+  return (
+    <section className="relative w-full py-24 px-4 bg-transparent flex flex-col items-center">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#8B0000]/10 blur-[100px] pointer-events-none" />
 
-    const [openIdx, setOpenIdx] = useState(0);
-    const faqs = [
-        { q: "What is Recursion 7.0?", a: "Recursion 7.0 is an elite inter-college technical summit featuring hackathons and high-stakes coding challenges." },
-        { q: "Who can participate?", a: "Open to all degree students from recognized colleges across India. Teams of 3-4 members are required." },
-        { q: "Are code templates allowed?", a: "No. All code must be written within the official competition window. No pre-written templates." },
-        { q: "Will certificates be provided?", a: "Yes, official digital certificates will be issued to all qualifying participants post-event." },
-    ];
+      <div className="relative z-10 w-full max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="font-[family-name:var(--font-cinzel)] text-4xl md:text-6xl font-black tracking-wider uppercase mb-4 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] to-[#8B6508]">
+            Knowledge
+          </h2>
+          <p className="text-gray-400 font-light tracking-widest text-sm uppercase">
+            Read carefully before you enter the well
+          </p>
+        </motion.div>
 
-    return (
-        <section id="faqs" className="bg-neutral-950 py-24 px-6 md:px-12">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 lg:gap-20">
-                <Fade>
-                    <span className="text-[10px] tracking-[0.5em] uppercase text-purple-500 font-bold mb-4 block">Knowledge Base</span>
-                    <h2 className="text-5xl md:text-7xl font-black text-white leading-tight font-porticoRough" >FAQS.</h2>
-                    <p className="mt-6 text-white/30 text-xs md:text-sm font-medium tracking-widest uppercase">Answers for the Curious Mind.</p>
-                </Fade>
-                <div className="flex flex-col gap-3">
-                    {faqs.map((f, i) => (
-                        <div key={i} className={`glass-card p-6 border-white/5 transition-all duration-500 rounded-xl ${openIdx === i ? "bg-white/[0.03]" : ""}`}>
-                            <button className="w-full flex justify-between items-center text-left gap-6 cursor-pointer" onClick={() => setOpenIdx(openIdx === i ? -1 : i)}>
-                                <h3 className="text-sm md:text-lg font-bold text-white uppercase tracking-wider">{f.q}</h3>
-                                <ChevronDown className={`w-5 h-5 text-white/20 transition-transform duration-500 ${openIdx === i ? "rotate-180 text-purple-500" : ""}`} />
-                            </button>
-                            <div className={`overflow-hidden transition-all duration-500 ${openIdx === i ? "max-h-40 mt-4" : "max-h-0"}`}>
-                                <p className="text-sm md:text-base text-white/40 leading-relaxed font-medium">{f.a}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-    )
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border border-[#D4AF37]/20 bg-black/20 backdrop-blur-sm border-b border-[#3a2a18]/40 data-[state=open]:bg-black/40 rounded-lg overflow-hidden data-[state=open]:border-[#D4AF37]/60 transition-colors"
+              >
+                <AccordionTrigger className="px-6 py-4 text-left text-gray-200 hover:text-[#D4AF37] font-medium tracking-wide hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-gray-400 leading-relaxed bg-black/40 pt-2 border-t border-[#D4AF37]/10">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
-
-export default FAQSection
