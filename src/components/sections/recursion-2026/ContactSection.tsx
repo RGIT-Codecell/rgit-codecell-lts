@@ -11,7 +11,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen py-32 px-4 flex flex-col justify-center items-center overflow-hidden bg-black">
+    <section id="contact" className="relative w-full min-h-screen py-32 px-4 flex flex-col justify-center items-center overflow-hidden bg-black">
 
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">

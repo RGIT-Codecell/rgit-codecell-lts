@@ -97,7 +97,8 @@ export default function HeroSection() {
             Descend into Mumbai&apos;s Elite Technical Summit. Benchmark your abilities in an environment of high-stakes evolution.
           </motion.p>
 
-          <motion.button 
+          <motion.a
+            href="#contact"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -105,7 +106,7 @@ export default function HeroSection() {
           >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e6b800]/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
               <span className="relative z-10 font-medium tracking-widest block transition-transform group-hover:scale-105">Descend</span>
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <div className="h-[120vh] w-full flex flex-col justify-center items-center relative">
