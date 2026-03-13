@@ -10,15 +10,16 @@ import FAQSection from "@/components/sections/recursion-2026/FAQSection";
 import Sponsers from "@/components/sections/recursion-2026/Sponsers";
 import ContactSection from "@/components/sections/recursion-2026/ContactSection";
 import CursorGlow from "@/components/sections/recursion-2026/CursorGlow";
+import RegistrationSection from "@/components/sections/recursion-2026/RegistrationSection";
 
 export default function RecursionPage() {
     return (
         <main className="min-h-screen bg-[#050505] overflow-hidden selection:bg-[#8B0000] selection:text-white">
             <CursorGlow />
-            
+
             {/* STAGE 1: The Surface & The Fall */}
             <HeroSection />
-            
+
             {/* STAGE 2: The Deep Well (Dirt & Darkness) */}
             <MiddleDescentWrapper>
                 <SkillsMarquee />
@@ -28,12 +29,13 @@ export default function RecursionPage() {
                 <Recursion2026Timeline />
                 <FAQSection />
                 <Sponsers />
+                {/* <RegistrationSection /> */}
             </MiddleDescentWrapper>
 
             {/* STAGE 3: The Womb (The Core) */}
             {/* We will build this final component to house the Hastar image and the Keepers */}
             <ContactSection />
-            
+
         </main>
     );
 }

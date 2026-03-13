@@ -45,7 +45,7 @@ export default function Sponsers() {
             <p className="text-[#D4AF37] text-xs tracking-widest uppercase mb-4 font-bold">Associate Partner</p>
             <div className="w-full h-32 relative bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] rounded-xl flex items-center justify-center p-6 transition-all hover:border-zinc-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] group">
               <Image 
-                src="/sponsors/itvedant.png" 
+                src="/recursion/itvedant.png" 
                 alt="I.T. Vedant" 
                 fill 
                 className="object-contain p-4 opacity-80 group-hover:opacity-100 transition-opacity" 
@@ -59,7 +59,7 @@ export default function Sponsers() {
             <div className="w-full h-40 relative bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] rounded-xl flex items-center justify-center p-8 transition-all hover:-translate-y-2 hover:border-[#8B0000] hover:shadow-[0_0_30px_rgba(139,0,0,0.3)]">
               <div className="absolute inset-0 bg-white/5 rounded-xl pointer-events-none" />
               <Image 
-                src="/sponsors/veefly.png" 
+                src="/recursion/veefly.png" 
                 alt="VeeFly" 
                 fill 
                 className="object-contain p-6" 
@@ -72,7 +72,7 @@ export default function Sponsers() {
             <p className="text-[#D4AF37] text-xs tracking-widest uppercase mb-4 font-bold">Platform Partner</p>
             <div className="w-full h-32 relative bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] rounded-xl flex items-center justify-center p-6 transition-all hover:border-zinc-600 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] group">
               <Image 
-                src="/sponsors/unstop.png" 
+                src="/recursion/unstop.png" 
                 alt="Unstop" 
                 fill 
                 className="object-contain p-4 opacity-80 group-hover:opacity-100 transition-opacity" 

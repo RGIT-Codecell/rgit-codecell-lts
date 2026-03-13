@@ -12,14 +12,14 @@ export default function ContactSection() {
 
   return (
     <section className="relative w-full min-h-screen py-32 px-4 flex flex-col justify-center items-center overflow-hidden bg-black">
-      
+
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/tumbbad-roots.jpeg" 
-          alt="Core Background" 
-          fill 
-          className="object-cover opacity-60 mix-blend-luminosity" 
+        <Image
+          src="/tumbbad-roots.jpeg"
+          alt="Core Background"
+          fill
+          className="object-cover opacity-60 mix-blend-luminosity"
           quality={85}
         />
       </div>
@@ -31,9 +31,9 @@ export default function ContactSection() {
 
       {/* Main Content Content */}
       <div className="relative z-20 w-full max-w-6xl mx-auto flex flex-col items-center">
-        
+
         {/* Call to Action Wrapper */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -46,10 +46,10 @@ export default function ContactSection() {
           <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             You have reached the core. The prize is waiting, but Hastar demands a sacrifice of sweat and code. Register before the gates close.
           </p>
-          
-          <a 
-            href="https://rgitcodecell.in" 
-            target="_blank" 
+
+          <a
+            href="https://unstop.com/hackathons/recursion-70-rajiv-gandhi-institute-of-technology-mumbai-1656541"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-block group relative px-12 py-5 bg-[#8B0000] text-white font-bold text-lg uppercase tracking-widest overflow-hidden border border-red-900 shadow-[0_0_30px_rgba(139,0,0,0.6)] transition-all hover:shadow-[0_0_50px_rgba(212,175,55,0.8)] hover:border-[#D4AF37]"
           >
@@ -69,7 +69,7 @@ export default function ContactSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {contacts.map((contact, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
