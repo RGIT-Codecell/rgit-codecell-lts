@@ -9,7 +9,7 @@ export function Recursion2026Timeline() {
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        09 Mar 26 - 18 Mar 26
+                        10 Mar 26 - 18 Mar 26
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium mb-4">
                         <strong>💻 PPT Solution Phase:</strong> Teams work on and provide solutions for the given problem statements.
