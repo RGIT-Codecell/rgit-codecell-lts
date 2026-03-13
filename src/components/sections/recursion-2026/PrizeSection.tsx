@@ -1,132 +1,101 @@
-import { Award, Briefcase, Code, Lightbulb, Presentation, Trophy, Medal } from 'lucide-react';
-import React, { ReactNode, useCallback, useEffect, useRef } from 'react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Trophy } from "lucide-react";
 
-const PrizeSection = () => {
+export default function PrizeSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
 
-    function Fade({ children, className = "" }: { children: ReactNode; className?: string }) {
-        const ref = useRef<HTMLDivElement>(null);
-        useEffect(() => {
-            const el = ref.current;
-            if (!el) return;
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-            const io = new IntersectionObserver(([e]) => {
-                if (e.isIntersecting) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                    io.unobserve(el);
-                }
-            }, { threshold: 0.1 });
-            io.observe(el);
-            return () => io.disconnect();
-        }, []);
-        return <div ref={ref} className={className}>{children}</div>;
-    }
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
-    const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const el = e.currentTarget;
-        const r = el.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width) * 100;
-        const y = ((e.clientY - r.top) / r.height) * 100;
-        el.style.transform = `perspective(1000px) rotateY(${(x - 50) * 0.04}deg) rotateX(${(y - 50) * -0.04}deg)`;
-    };
+  return (
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-24 px-4 bg-transparent overflow-hidden">
+      {/* Background Ambience Elements */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#8B0000] via-[#050505] to-[#050505]" />
 
-    const onLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg)";
-    };
-
-    // Sub-component for the Top 3 Podium Cards
-    const PodiumCard = ({ rank, amount, sub, icon, color1, heightClass }: any) => (
-        <div 
-            onMouseMove={onMove} onMouseLeave={onLeave}
-            className={`relative flex-1 w-full max-w-sm ${heightClass} transition-all duration-300 ease-out group`}
+      <div className="relative z-10 text-center mb-16 w-full max-w-5xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-tumbbad-blood text-sm md:text-base tracking-[0.4em] uppercase font-bold mb-4 drop-shadow-[0_0_8px_rgba(139,0,0,0.8)]"
         >
-            <div className="absolute -inset-[1px] rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity" style={{ background: color1 }} />
-            <div className="h-full flex flex-col items-center justify-center p-8 text-center bg-neutral-900/40 backdrop-blur-md ring-1 ring-white/10 rounded-2xl">
-                <div className="mb-6 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:scale-110 transition-transform duration-500">{icon}</div>
-                <p className="text-[10px] font-black tracking-[0.3em] uppercase text-white/40 mb-2">{rank}</p>
-                <p className="text-4xl md:text-5xl font-black text-white leading-none mb-3 tracking-tighter">{amount}</p>
-                <p className="text-[10px] tracking-widest uppercase font-bold text-white/20">{sub}</p>
-            </div>
-        </div>
-    );
-
-    // Sub-component for Category List Rows
-    const CategoryRow = ({ title, amount, icon: Icon }: any) => (
-        <div 
-            onMouseMove={onMove} onMouseLeave={onLeave}
-            className="group relative w-full transition-all duration-300 ease-out mb-3"
+          The Reward for the Evolved
+        </motion.h2>
+        
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="font-[family-name:var(--font-cinzel)] text-5xl md:text-7xl font-black tracking-wider uppercase mb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] via-[#D4AF37] to-[#8B6508] drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
         >
-            <div className="relative bg-neutral-900/30 flex flex-col md:flex-row items-center p-5 rounded-xl border border-white/5 hover:border-white/20 transition-all">
-                <div className="flex items-center justify-between w-full md:w-auto md:min-w-[140px] md:border-r border-white/5 md:pr-6">
-                    <span className="text-white font-black text-xl">{amount}</span>
-                    <span className="text-[10px] font-black text-emerald-500 tracking-tighter ml-2">Voucher</span>
-                </div>
-                <div className="flex-1 md:pl-6 mt-3 md:mt-0 flex items-center gap-4 w-full">
-                    <Icon className="w-4 h-4 text-white/40" />
-                    <span className="text-sm font-bold text-white/80">{title}</span>
-                </div>
-            </div>
-        </div>
-    );
+          Prize Pool
+        </motion.h1>
 
-    return (
-        <section id="prizes" className="bg-neutral-950 py-24 px-6 md:px-12 relative overflow-hidden">
-             {/* Background glow */}
-             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[400px] bg-amber-500/5 blur-[120px] rounded-full" />
+        {/* Prize Value */}
+        <motion.div
+           initial={{ opacity: 0, scale: 0.8 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           viewport={{ once: true }}
+           transition={{ duration: 1, delay: 0.2, type: "spring" }}
+           className="font-[family-name:var(--font-cinzel)] text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFDF00] via-[#D4AF37] to-[#664d00] drop-shadow-[0_0_40px_rgba(255,223,0,0.4)] my-6"
+        >
+          ₹3,50,000
+        </motion.div>
+        
+        <p className="text-gray-400 font-light tracking-widest text-sm uppercase">
+          + 50k Vouchers Worth Special Prizes
+        </p>
+      </div>
 
-            <div className="max-w-6xl mx-auto relative z-10">
-                <Fade className="text-center mb-16">
-                    <h3 className="text-[10px] tracking-[0.5em] uppercase text-amber-500/60 font-black mb-4">Elite Rewards</h3>
-                    <h2 className="text-4xl md:text-7xl font-black text-white mb-6">PRIZE POOL</h2>
-                </Fade>
+      {/* Prize Tiers Grid */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+        className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center px-4"
+      >
+        {/* Third Tier Option (Left) */}
+        <motion.div variants={cardVariants} className="order-2 md:order-1 flex flex-col items-center">
+          <div className="w-full relative group rounded-lg bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:border-[#D4AF37]/80 hover:shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+            <Trophy className="w-16 h-16 mx-auto mb-6 text-gray-400 group-hover:text-gray-200 transition-colors" strokeWidth={1.5} />
+            <h3 className="font-[family-name:var(--font-cinzel)] text-4xl font-bold text-gray-300 mb-2">1 LAKH</h3>
+            <p className="text-gray-500 text-sm tracking-widest uppercase font-medium">Cash + Vouchers</p>
+          </div>
+        </motion.div>
 
-                {/* THE PODIUM (Top 3) */}
-                <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-6 mb-16">
-                    <PodiumCard
-                        rank="First Runner Up"
-                        amount="₹1,00,000"
-                        sub="Cash + Vouchers"
-                        icon={<Medal className="w-10 h-10 text-slate-300" />}
-                        color1="rgba(200,200,210,0.5)"
-                        heightClass="lg:h-[300px]"
-                    />
-                    <PodiumCard
-                        rank="Champions"
-                        amount="₹1,20,000"
-                        sub="Cash + Ultimate Pack"
-                        icon={<Trophy className="w-14 h-14 text-amber-400" />}
-                        color1="rgba(255,215,0,0.6)"
-                        heightClass="lg:h-[360px]"
-                    />
-                    <PodiumCard
-                        rank="Second Runner-Up"
-                        amount="₹80,000"
-                        sub="Cash + Tech Kit"
-                        icon={<Award className="w-10 h-10 text-amber-700" />}
-                        color1="rgba(205,127,50,0.5)"
-                        heightClass="lg:h-[280px]"
-                    />
-                </div>
+        {/* First Tier Option (Center) */}
+        <motion.div variants={cardVariants} className="order-1 md:order-2 flex flex-col items-center z-20">
+          <div className="w-full relative group rounded-lg bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-10 text-center transition-all duration-500 hover:-translate-y-4 hover:border-[#FFDF00] hover:shadow-[0_0_60px_rgba(255,223,0,0.4)] scale-105">
+            {/* Subtle glow behind the trophy */}
+            <div className="absolute top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-[#D4AF37]/20 blur-2xl rounded-full" />
+            <Trophy className="relative w-24 h-24 mx-auto mb-6 text-[#D4AF37] group-hover:text-[#FFDF00] transition-colors drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]" strokeWidth={1.5} />
+            <h3 className="font-[family-name:var(--font-cinzel)] text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] to-[#D4AF37] mb-2">1.2 LAKH</h3>
+            <p className="text-[#D4AF37] text-sm tracking-widest uppercase font-medium">Cash + Vouchers</p>
+          </div>
+        </motion.div>
 
-                {/* THE CATEGORIES (List) */}
-                <div className="max-w-3xl mx-auto">
-                    <Fade className="mb-6">
-                        <h4 className="text-[10px] tracking-widest uppercase font-black text-white/30 border-b border-white/5 pb-2">Special Categories</h4>
-                    </Fade>
-                    <Fade>
-                        <CategoryRow title="Best Innovation" amount="₹10,000" icon={Lightbulb} />
-                        <CategoryRow title="Best Presentation" amount="₹10,000" icon={Presentation} />
-                        <CategoryRow title="Best Technical Implementation" amount="₹10,000" icon={Code} />
-                        <CategoryRow title="Best Real-World Impact" amount="₹10,000" icon={Briefcase} />
-                        <CategoryRow title="Best Use of Technology" amount="₹10,000" icon={Lightbulb} />
-                    </Fade>
-                </div>
+        {/* Second Tier Option (Right) */}
+        <motion.div variants={cardVariants} className="order-3 md:order-3 flex flex-col items-center">
+          <div className="w-full relative group rounded-lg bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:border-[#D4AF37]/80 hover:shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+            <Trophy className="w-16 h-16 mx-auto mb-6 text-[#8B6508] group-hover:text-[#D4AF37] transition-colors" strokeWidth={1.5} />
+            <h3 className="font-[family-name:var(--font-cinzel)] text-4xl font-bold text-gray-400 mb-2">80K</h3>
+            <p className="text-gray-500 text-sm tracking-widest uppercase font-medium">Cash + Vouchers</p>
+          </div>
+        </motion.div>
 
-            </div>
-        </section>
-    );
-};
-
-export default PrizeSection;
+      </motion.div>
+    </section>
+  );
+}
