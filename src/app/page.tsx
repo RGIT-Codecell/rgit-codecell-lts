@@ -21,7 +21,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-center md:text-5xl text-2xl font-bold md:w-[60%]">
-          "Platform Where We Collaborate To Bring Out The Best Coder In Us"
+          &quot;Platform Where We Collaborate To Bring Out The Best Coder In Us&quot;
         </h1>
 
         <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-4 mt-10 w-full">
@@ -31,10 +31,13 @@ export default function Home() {
             </Button>
           </Link>
           <Link href="/recursion-2026" className="w-full md:w-auto">
-            <Button size="lg" className="w-full md:w-auto">
-              Checkout Recursion 7.0
-              <ArrowRight className="-rotate-[35deg]" />
-            </Button>
+            <button className="relative w-full md:w-auto px-6 py-3 bg-[#8B0000] text-white font-bold uppercase tracking-widest border border-red-900 overflow-hidden group shadow-[0_0_15px_rgba(139,0,0,0.5)] transition-all hover:shadow-[0_0_25px_rgba(212,175,55,0.7)] hover:border-[#D4AF37] cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Checkout Recursion 7.0{" "}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
           </Link>
         </div>
       </section>

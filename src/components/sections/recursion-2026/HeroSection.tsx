@@ -73,18 +73,18 @@ export default function HeroSection() {
         
         <motion.div
           style={{ opacity: heroTextOpacity, y: heroTextY }}
-          className="h-screen flex flex-col justify-center items-center px-4 pt-20 text-center"
+          className="h-screen flex flex-col justify-center items-center px-3 sm:px-4 pt-16 sm:pt-20 text-center"
         >
           <motion.h2 
             initial={{ opacity: 0, letterSpacing: "0.1em" }}
             animate={{ opacity: 0.7, letterSpacing: "0.4em" }}
             transition={{ duration: 2, ease: "easeOut" }}
-            className="text-gray-300 text-xs md:text-xl uppercase mb-4 font-bold drop-shadow-md"
+            className="text-gray-300 text-[10px] sm:text-xs md:text-xl uppercase mb-2 sm:mb-4 font-bold drop-shadow-md"
           >
             RGIT Codecell & CESS Present
           </motion.h2>
 
-          <h1 className={`${cinzelText} text-6xl md:text-8xl lg:text-9xl font-black tracking-wider mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] via-[#D4AF37] to-[#8B6508] drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}>
+          <h1 className={`${cinzelText} text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black tracking-wider mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] via-[#D4AF37] to-[#8B6508] drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}>
             RECURSION 7.0
           </h1>
           
@@ -92,7 +92,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 1 }}
-            className="text-gray-200 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+            className="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base md:text-xl mb-8 sm:mb-12 font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] px-2"
           >
             Descend into Mumbai&apos;s Elite Technical Summit. Benchmark your abilities in an environment of high-stakes evolution.
           </motion.p>
@@ -102,14 +102,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="group relative px-8 py-4 bg-[#660000] text-[#e6b800] font-bold uppercase tracking-widest overflow-hidden border border-[#4d0000] shadow-[0_0_30px_rgba(102,0,0,0.8)] transition-all hover:shadow-[0_0_50px_rgba(230,184,0,0.5)] hover:border-[#e6b800] hover:bg-[#800000]"
+            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-[#660000] text-[#e6b800] font-bold uppercase tracking-widest overflow-hidden border border-[#4d0000] shadow-[0_0_30px_rgba(102,0,0,0.8)] transition-all hover:shadow-[0_0_50px_rgba(230,184,0,0.5)] hover:border-[#e6b800] hover:bg-[#800000] text-sm sm:text-base"
           >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e6b800]/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
               <span className="relative z-10 font-medium tracking-widest block transition-transform group-hover:scale-105">Descend</span>
           </motion.a>
         </motion.div>
 
-        <div className="h-[120vh] w-full flex flex-col justify-center items-center relative">
+        <div className="h-[80vh] sm:h-[120vh] w-full flex flex-col justify-center items-center relative">
             
             <motion.div
               initial={{ opacity: 0, scale: 0.8, filter: "blur(15px)" }}
@@ -118,10 +118,10 @@ export default function HeroSection() {
               transition={{ duration: 2.5, ease: "easeOut" }}
               className="text-center z-50 flex flex-col items-center"
             >
-                <p className="font-[family-name:var(--font-cinzel)] text-[#8B0000] text-3xl md:text-5xl lg:text-6xl tracking-widest uppercase font-black mb-6 drop-shadow-[0_0_20px_rgba(139,0,0,0.9)]">
+                <p className="font-[family-name:var(--font-cinzel)] text-[#8B0000] text-xl sm:text-3xl md:text-5xl lg:text-6xl tracking-widest uppercase font-black mb-4 sm:mb-6 drop-shadow-[0_0_20px_rgba(139,0,0,0.9)] px-4">
                   Do not fear the dark
                 </p>
-                <p className="text-gray-500 font-light tracking-[0.5em] text-sm md:text-base uppercase opacity-60">
+                <p className="text-gray-500 font-light tracking-[0.3em] sm:tracking-[0.5em] text-xs sm:text-sm md:text-base uppercase opacity-60">
                   Keep Descending
                 </p>
             </motion.div>
@@ -136,11 +136,11 @@ export default function HeroSection() {
             
         </div>
 
-        <div className="h-screen flex flex-col justify-center items-center text-center px-4">
-            <h2 className={`${cinzelText} text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] via-[#D4AF37] to-[#8B6508]`}>
+        <div className="h-screen flex flex-col justify-center items-center text-center px-3 sm:px-4">
+            <h2 className={`${cinzelText} text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] via-[#D4AF37] to-[#8B6508]`}>
                 Unlock the Treasure
             </h2>
-            <p className="text-[#d4af37] max-w-2xl mx-auto text-lg md:text-2xl font-semibold tracking-[0.2em] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+            <p className="text-[#d4af37] max-w-2xl mx-auto text-sm sm:text-lg md:text-2xl font-semibold tracking-[0.1em] sm:tracking-[0.2em] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] px-2">
                 Only the evolved escape the core.
             </p>
             <div className="mt-12 opacity-80 animate-bounce">

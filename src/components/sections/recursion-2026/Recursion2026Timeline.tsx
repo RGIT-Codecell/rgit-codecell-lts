@@ -60,45 +60,41 @@ export function Recursion2026Timeline() {
   ];
 
   return (
-    <section ref={containerRef} className="relative w-full py-24 px-4 bg-transparent">
+    <section ref={containerRef} className="relative w-full py-16 sm:py-24 px-3 sm:px-4 bg-transparent">
       <div className="max-w-5xl mx-auto relative z-10">
         
         <div className="text-center mb-16">
-          <h2 className="font-[family-name:var(--font-cinzel)] text-4xl md:text-6xl font-black tracking-wider uppercase mb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] to-[#8B6508]">
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl sm:text-4xl md:text-6xl font-black tracking-wider uppercase mb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] to-[#8B6508]">
             The Descent Log
           </h2>
           <p className="text-gray-500 font-light tracking-widest text-sm uppercase">The Official Timeline</p>
         </div>
 
-        <div className="relative pl-8 md:pl-0">
-          {/* Static Background Guideline */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-zinc-900 -translate-x-1/2" />
+        <div className="relative pl-10 sm:pl-8 md:pl-0">
+          <div className="absolute left-[18px] sm:left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-zinc-900 -translate-x-1/2" />
           
-          {/* Animated Scroll Guideline */}
           <motion.div 
             style={{ height: bloodLineHeight }}
-            className="absolute left-8 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-[#8B0000] to-red-600 -translate-x-1/2 shadow-[0_0_10px_rgba(139,0,0,0.8)]" 
+            className="absolute left-[18px] sm:left-8 md:left-1/2 top-0 w-[2px] bg-gradient-to-b from-[#8B0000] to-red-600 -translate-x-1/2 shadow-[0_0_10px_rgba(139,0,0,0.8)]" 
           />
 
           {events.map((event, index) => (
-            <div key={index} className={`relative flex flex-col md:flex-row items-center justify-between mb-12 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+            <div key={index} className={`relative flex flex-col md:flex-row items-start md:items-center justify-between mb-8 sm:mb-12 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
               
-              {/* Timeline Node Marker */}
-              <div className="absolute left-[-31px] md:left-1/2 w-4 h-4 rounded-full bg-[#050505] border-2 border-[#D4AF37] -translate-x-1/2 z-10 shadow-[0_0_8px_rgba(212,175,55,0.6)]" />
+              <div className="absolute left-[-27px] sm:left-[-31px] md:left-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#050505] border-2 border-[#D4AF37] -translate-x-1/2 z-10 shadow-[0_0_8px_rgba(212,175,55,0.6)] top-6 md:top-1/2 md:-translate-y-1/2" />
 
               <div className="hidden md:block md:w-5/12" />
 
-              {/* Event Content Card */}
               <motion.div 
                 initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="w-full md:w-5/12 bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-6 rounded-lg hover:border-[#8B0000]/50 transition-colors"
+                className="w-full md:w-5/12 bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/30 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-4 sm:p-6 rounded-lg hover:border-[#8B0000]/50 transition-colors"
                >
                 <span className="text-[#D4AF37] text-xs font-bold tracking-widest uppercase block mb-2">{event.time}</span>
-                <h3 className="text-xl font-bold text-gray-200 mb-2">{event.title}</h3>
-                <div className="text-gray-400 text-sm leading-relaxed">{event.desc}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2">{event.title}</h3>
+                <div className="text-gray-400 text-xs sm:text-sm leading-relaxed">{event.desc}</div>
               </motion.div>
             </div>
           ))}
