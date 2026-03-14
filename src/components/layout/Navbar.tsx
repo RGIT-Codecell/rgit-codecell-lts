@@ -13,7 +13,6 @@ export default function Navbar() {
 
     return (
         <>
-            {/* NAVBAR */}
             <nav className="fixed top-0 pt-4 w-full flex items-center justify-between px-6 md:px-12 z-[99] bg-gradient-to-b from-background to-transparent">
                 <Image
                     src="/logo.png"
@@ -22,7 +21,6 @@ export default function Navbar() {
                     height={150}
                 />
 
-                {/* Desktop Nav */}
                 <div
                     className={cn(
                         "hidden md:flex items-center space-x-8 py-4 px-6",
@@ -33,14 +31,17 @@ export default function Navbar() {
                         <Link
                             key={route.path}
                             href={route.path}
-                            className="text-md text-white hover:text-gray-300"
+                            className={`px-3 py-1 transition-all ${
+                                route.name === "Recursion 7.0"
+                                    ? "text-[#FFDF00] font-black drop-shadow-[0_0_5px_rgba(255,223,0,0.5)] hover:text-[#8B0000]"
+                                    : "text-md text-white hover:text-gray-300"
+                            }`}
                         >
                             {route.name}
                         </Link>
                     ))}
                 </div>
 
-                {/* Desktop Social Icons */}
                 <div className="hidden md:flex items-center space-x-4">
                     <Link href="https://www.linkedin.com/company/rgit-codecell/" target="_blank">
                         <Linkedin color="white" />
@@ -50,7 +51,6 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button
                     className="md:hidden text-white z-[100]"
                     onClick={() => setMobileOpen(true)}
@@ -59,7 +59,6 @@ export default function Navbar() {
                 </button>
             </nav>
 
-            {/* MOBILE OVERLAY MENU */}
             <AnimatePresence>
                 {mobileOpen && (
                     <motion.div
@@ -69,7 +68,6 @@ export default function Navbar() {
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-lg overflow-hidden"
                     >
-                        {/* Slide content in */}
                         <motion.div
                             initial={{ x: "-100%" }}
                             animate={{ x: 0 }}
@@ -89,7 +87,11 @@ export default function Navbar() {
                                     key={route.path}
                                     href={route.path}
                                     onClick={() => setMobileOpen(false)}
-                                    className="text-2xl font-semibold hover:text-gray-300"
+                                    className={`text-2xl font-semibold transition-all ${
+                                        route.name === "Recursion 7.0"
+                                            ? "text-[#FFDF00] font-black drop-shadow-[0_0_8px_rgba(255,223,0,0.6)] hover:text-[#8B0000]"
+                                            : "hover:text-gray-300"
+                                    }`}
                                 >
                                     {route.name}
                                 </Link>
