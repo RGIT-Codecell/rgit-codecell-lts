@@ -7,10 +7,26 @@ export default function AboutUs() {
         <section className="flex flex-col items-center justify-start min-h-screen py-12" id="about-us">
 
             {/* SPONSORS */}
-            <span className="text-slate-600 font-medium text-xl">OUR TRUSTED PARTNERS & SPONSORS</span>
+            <span className="text-slate-400 font-medium text-xl">OUR TRUSTED PARTNERS & SPONSORS</span>
             <div className="flex items-center justify-center my-12 space-x-12">
-                <Image src="/H2S_White_Logo.png" alt="HACK2SKILL LOGO" width={200} height={200} />
-                {/* <Image src="/ethindia-light.png" alt="ETHINDIA LOGO" width={200} height={200} /> */}
+                <Image 
+                  src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue-Medium.png" 
+                  alt="UNSTOP Logo" 
+                  width={180} 
+                  height={180} 
+                />
+                <Image 
+                  src="/sponsors/itvedant.png" 
+                  alt="ITVEDANT Logo" 
+                  width={210} 
+                  height={210} 
+                />
+                <Image 
+                  src="/recursion/veefly.png" 
+                  alt="VEEFLY Logo" 
+                  width={200} 
+                  height={200} 
+                />
             </div>
 
             <aside className="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
