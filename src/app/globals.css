@@ -875,3 +875,51 @@ textarea:focus {
   -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 20%, transparent 70%);
   pointer-events: none;
 }
+
+/* Tumbbad Performance Rain Animation (React DOM Version) */
+@keyframes rain {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+.animate-rain {
+  animation: rain linear infinite;
+}
+
+/* The Vignette (Darkens the edges so text is readable) */
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle at center, transparent 20%, #000000 90%);
+}
+
+/* Mobile-specific optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .glass-card:hover {
+    transform: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .prize-podium-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .countdown-unit {
+    min-width: 60px;
+    padding: 0.75rem 1rem;
+  }
+
+  .stat-card .stat-value {
+    font-size: 2rem;
+  }
+}

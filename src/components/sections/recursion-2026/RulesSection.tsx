@@ -1,68 +1,58 @@
-import { Zap } from 'lucide-react';
-import React, { ReactNode, useEffect, useRef } from 'react'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
 
-const RulesSection = () => {
+export default function RulesSection() {
+  const groups = [
+    { title: "Registration", rules: ["Valid College Credentials required.", "Strict registration deadlines.", "One identity per participant."] },
+    { title: "Fair Play", rules: ["Zero tolerance for plagiarism.", "Bring personal hardware (Laptops).", "Professional ethics expected."] },
+    { title: "Judicial", rules: ["Jury decisions are final.", "Submission latency is the tie-breaker.", "Presence required at ceremony."] },
+  ];
 
-    /**
-     * Scroll-triggered entrance animations
-     */
-    function Fade({ children, className = "" }: { children: ReactNode; className?: string }) {
-        const ref = useRef<HTMLDivElement>(null);
-        useEffect(() => {
-            const el = ref.current;
-            if (!el) return;
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-            const io = new IntersectionObserver(([e]) => {
-                if (e.isIntersecting) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                    io.unobserve(el);
-                }
-            }, { threshold: 0.1 });
-            io.observe(el);
-            return () => io.disconnect();
-        }, []);
-        return <div ref={ref} className={className}>{children}</div>;
-    }
+  return (    <section id="rules" className="relative w-full py-16 sm:py-24 px-3 sm:px-4 bg-transparent flex flex-col items-center">
+      <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-[#8B0000]/10 blur-[150px] rounded-full pointer-events-none" />
 
-    
-    const groups = [
-        { title: "Registration", rules: ["Valid College Credentials required.", "Strict registration deadlines.", "One identity per participant."] },
-        { title: "Fair Play", rules: ["Zero tolerance for plagiarism.", "Bring personal hardware (Laptops).", "Professional ethics expected."] },
-        { title: "Judicial", rules: ["Jury decisions are final.", "Submission latency is the tie-breaker.", "Presence required at ceremony."] },
-    ];
+      <div className="relative z-10 w-full max-w-6xl mx-auto">
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-[family-name:var(--font-cinzel)] text-3xl sm:text-4xl md:text-6xl font-black tracking-wider uppercase mb-3 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-b from-[#FFF8DC] to-[#8B6508]">
+            Event Rules
+          </h2>
+          <p className="text-gray-400 font-light tracking-widest text-sm uppercase">
+            The Framework
+          </p>
+        </motion.div>
 
-    return (
-        <div>
-
-            <section id="rules" className="py-24 px-6 md:px-12 bg-black border-y border-white/5">
-                <div className="max-w-7xl mx-auto">
-                    <Fade className="text-center mb-16 lg:mb-20">
-                        <h3 className="text-[10px] tracking-[0.5em] uppercase text-white/30 font-black mb-4">The Framework</h3>
-                        <h2 className="text-3xl md:text-5xl font-black text-white  font-porticoRough" >EVENT RULES</h2>
-                    </Fade>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                        {groups.map((g) => (
-                            <div key={g.title} className="glass-card p-10 border-white/5 hover:bg-white/[0.02] transition-colors rounded-2xl group">
-                                <h4 className="text-lg font-black text-white mb-6 uppercase tracking-[0.2em]">{g.title}</h4>
-                                <ul className="space-y-4">
-                                    {g.rules.map((r, i) => (
-                                        <li key={i} className="flex items-start text-sm text-white/40 leading-relaxed font-medium">
-                                            <Zap className="w-3.5 h-3.5 mr-3 mt-1 text-purple-600/70" />
-                                            <span>{r}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          {groups.map((g, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="w-full bg-[#120e0a]/40 backdrop-blur-md border border-[#3a2a18]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] p-6 sm:p-10 rounded-lg transition-colors hover:border-[#D4AF37]/50"
+            >
+              <h4 className="text-lg font-bold text-[#E5B80B] mb-6 uppercase tracking-[0.2em] font-serif">{g.title}</h4>
+              <ul className="space-y-4">
+                {g.rules.map((r, i) => (
+                  <li key={i} className="flex items-start text-sm md:text-base text-gray-300 leading-relaxed font-medium">
+                    <Zap className="w-5 h-5 mr-3 shrink-0 text-[#8B0000] drop-shadow-[0_0_5px_rgba(139,0,0,0.8)]" />
+                    <span>{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
-    )
-}
 
-export default RulesSection
+      </div>
+    </section>
+  );
+}
