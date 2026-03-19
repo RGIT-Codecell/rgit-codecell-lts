@@ -37,8 +37,11 @@ export default function Home() {
                 Checkout Recursion 7.0{" "}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
+
             </button>
           </Link>
+
+
         </div>
       </section>
 
