@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import RainOverlay from "@/components/ui/RainOverlay";
+import Link from "next/link";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -98,14 +99,17 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.a
-            href="#contact"
+            href="/recursion-2026/shortlisted"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
             className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-[#660000] text-[#e6b800] font-bold uppercase tracking-widest overflow-hidden border border-[#4d0000] shadow-[0_0_30px_rgba(102,0,0,0.8)] transition-all hover:shadow-[0_0_50px_rgba(230,184,0,0.5)] hover:border-[#e6b800] hover:bg-[#800000] text-sm sm:text-base"
           >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e6b800]/20 to-transparent -translate-x-[150%] group-hover:animate-[shimmer_1.5s_infinite]" />
-              <span className="relative z-10 font-medium tracking-widest block transition-transform group-hover:scale-105">Descend</span>
+              <Link href="/recursion-2026/shortlisted">
+              {/* <span className="relative z-10 font-medium tracking-widest block transition-transform group-hover:scale-105">Checkout Recursion 7.0 Shortlisted Teams</span> */}
+                Checkout Recursion 7.0 Shortlisted Teams
+              </Link>
           </motion.a>
         </motion.div>
 

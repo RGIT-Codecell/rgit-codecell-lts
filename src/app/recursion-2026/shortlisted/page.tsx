@@ -11,7 +11,7 @@ import {
 import { shortlistedTeams } from "@/lib/shortlisted";
 
 export default function ShortlistedTeams() {
-    const [selectedDomain, setSelectedDomain] = useState<string>("web");
+    const [selectedDomain, setSelectedDomain] = useState<string>("all");
 
     const cinzelText = "font-[family-name:var(--font-cinzel-decorative)] font-black tracking-wider uppercase";
 
@@ -64,11 +64,11 @@ export default function ShortlistedTeams() {
                     </div>
                 </section>
 
-                {/* <section className="h-screen flex flex-col items-center justify-center w-full px-4 relative z-10">
+                <section className="h-screen flex flex-col items-center justify-center w-full px-4 relative z-10">
                     <h1 className={`${cinzelText} text-4xl md:text-5xl lg:text-7xl text-center text-[#D4AF37] drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]`}>
                         JUST KIDDING ... 😂
                     </h1>
-                </section> */}
+                </section>
 
                 {/* <section className="h-screen flex flex-col items-center justify-center w-full px-4 relative z-10">
                     <h1 className={`${cinzelText} text-4xl md:text-5xl lg:text-7xl text-center text-[#8B0000] drop-shadow-[0_0_15px_rgba(139,0,0,0.8)]`}>
@@ -82,14 +82,14 @@ export default function ShortlistedTeams() {
                     SHORTLISTED TEAMS
                 </h1>
 
-                <Select onValueChange={setSelectedDomain} defaultValue="web">
+                <Select onValueChange={setSelectedDomain} defaultValue="all">
                     <SelectTrigger className="w-[280px] md:w-[350px] mb-12 md:mb-16 bg-[#0a0a0a]/80 border border-[#D4AF37]/40 text-[#FFF8DC] font-[family-name:var(--font-cinzel)] font-bold tracking-widest uppercase hover:border-[#D4AF37] hover:bg-[#1a1a1a] transition-all focus:ring-1 focus:ring-[#8B0000] rounded-none py-6">
                         <SelectValue placeholder="Select Domain" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#0a0a0a] border border-[#D4AF37]/30 text-[#FFF8DC] font-[family-name:var(--font-cinzel)] rounded-none">
-                        <SelectItem value="web" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold">WEB / APP DEVELOPMENT</SelectItem>
-                        <SelectItem value="ai" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold">AI / ML</SelectItem>
-                        <SelectItem value="blockchain" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold disabled:opacity-50">BLOCKCHAIN</SelectItem>
+                        <SelectItem value="all" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold">ALL</SelectItem>
+                        {/* <SelectItem value="all" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold">AI / ML</SelectItem> */}
+                        {/* <SelectItem value="all" className="focus:bg-[#8B0000]/60 focus:text-[#FFF8DC] cursor-pointer tracking-wider py-3 font-bold disabled:opacity-50">BLOCKCHAIN</SelectItem> */}
                     </SelectContent>
                 </Select>
 
