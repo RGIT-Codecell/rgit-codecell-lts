@@ -8,24 +8,27 @@ export default function AboutUs() {
 
             {/* SPONSORS */}
             <span className="text-slate-400 font-medium text-xl">OUR TRUSTED PARTNERS & SPONSORS</span>
-            <div className="flex items-center justify-center my-12 space-x-12">
-                <Image 
-                  src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue-Medium.png" 
-                  alt="UNSTOP Logo" 
-                  width={180} 
-                  height={180} 
+            <div className="flex flex-wrap items-center justify-center my-12 gap-6 sm:gap-12 px-4">
+                <Image
+                  src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue-Medium.png"
+                  alt="UNSTOP Logo"
+                  width={180}
+                  height={180}
+                  className="w-[120px] sm:w-[180px] h-auto"
                 />
-                <Image 
-                  src="/sponsors/itvedant.png" 
-                  alt="ITVEDANT Logo" 
-                  width={210} 
-                  height={210} 
+                <Image
+                  src="/sponsors/itvedant.png"
+                  alt="ITVEDANT Logo"
+                  width={210}
+                  height={210}
+                  className="w-[140px] sm:w-[210px] h-auto"
                 />
-                <Image 
-                  src="/recursion/veefly.png" 
-                  alt="VEEFLY Logo" 
-                  width={200} 
-                  height={200} 
+                <Image
+                  src="/recursion/veefly.png"
+                  alt="VEEFLY Logo"
+                  width={200}
+                  height={200}
+                  className="w-[130px] sm:w-[200px] h-auto"
                 />
             </div>
 
