@@ -11,7 +11,7 @@ import {
 import { shortlistedTeams } from "@/lib/shortlisted";
 
 export default function ShortlistedTeams() {
-    const [selectedDomain, setSelectedDomain] = useState<string>("web");
+    const [selectedDomain, setSelectedDomain] = useState<string>("all");
 
     return (
         <main>
@@ -57,18 +57,19 @@ export default function ShortlistedTeams() {
                     SHORTLISTED TEAMS
                 </h1>
 
-                <Select onValueChange={setSelectedDomain} defaultValue="web">
+                <Select onValueChange={setSelectedDomain} defaultValue="all">
                     <SelectTrigger className="w-[280px] md:w-[320px] mb-6 md:mb-8">
                         <SelectValue placeholder="Select Domain" />
                     </SelectTrigger>
                     <SelectContent>
+                        <SelectItem value="all">All Domains</SelectItem>
                         <SelectItem value="web">Web / App Development</SelectItem>
                         <SelectItem value="ai">AI / ML</SelectItem>
                     </SelectContent>
                 </Select>
 
                 <div className="w-full max-w-sm md:max-w-2xl space-y-3 md:space-y-4 px-4 md:px-0">
-                    {shortlistedTeams[selectedDomain as keyof typeof shortlistedTeams].map((team, index) => (
+                    {shortlistedTeams[selectedDomain as keyof typeof shortlistedTeams]?.map((team, index) => (
                         <div
                             key={index}
                             className="p-3 md:p-4 border border-foreground/20 rounded-lg hover:bg-foreground/5 transition-colors text-sm md:text-base"
