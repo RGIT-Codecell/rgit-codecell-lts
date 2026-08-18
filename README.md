@@ -38,4 +38,8 @@ Use the following command to upgrade Next.js to the latest version:
 
 ## Developer
 
-Developed by [Dhruv Lohar](https://github.com/DhruvLohar) and [Nandani Kadave](https://github.com/Nandanikadave) 
+Developed by [Dhruv Lohar](https://github.com/DhruvLohar) and [Nandani Kadave](https://github.com/Nandanikadave)
+
+Developed by [Vishal Barai](https://github.com/Vishalbarai007) 
+
+Developed by [Shobhan Kar](https://github.com/Shobhangtavgamer) 
