@@ -11,8 +11,8 @@ export const ROUTES: Route[] = [
     { path: '/teams', name: 'Our Team' },
     { path: '/founders', name: 'Founders' },
     // { path: '/recursion', name: 'Recursion 6.0' },
-    { path: '/sih-2025', name: 'SIH 2025' },
-    { path: '/codertine-25', name: 'Codertine 6.0' },
-    { path: '/recursion-2026', name: 'Recursion 7.0' },
+    { path: '/sih-2026', name: 'SIH 2026' },
+    // { path: '/codertine-25', name: 'Codertine 6.0' },
+    // { path: '/recursion-2026', name: 'Recursion 7.0' },
 
 ]
