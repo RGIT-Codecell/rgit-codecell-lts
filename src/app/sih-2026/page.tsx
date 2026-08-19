@@ -77,7 +77,8 @@ export default function SIH2025Section() {
           </motion.h1>
           <motion.img
             className="w-[250px] md:w-[600px] h-auto object-contain mx-auto md:static mt-8 md:mt-56 absolute top-[11rem]"
-            src="/data/SIH Poster 2.png"
+            // src="/data/SIH Poster 2.png"
+            src="https://res.cloudinary.com/dbsohsdkz/image/upload/v1787162528/WhatsApp_Image_2026-08-19_at_22.40.09_arbmis.jpg"
             alt="SIH 2025 Poster"
           />
           <motion.div
