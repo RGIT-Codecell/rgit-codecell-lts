@@ -7,7 +7,7 @@ export default function TeamDisplay({ team }: { team: Team }) {
     const leads = team.members.filter(
     (member) =>
         member.position.toLowerCase() === "lead" ||
-        member.position.toLowerCase() === "assistant lead"
+        member.position.toLowerCase() === "Asst. Lead"
 );
 
     const others = team.members.filter(
