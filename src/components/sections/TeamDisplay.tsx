@@ -4,23 +4,27 @@ import { Team } from "@/lib/teams/type";
 import Image from "next/image";
 
 export default function TeamDisplay({ team }: { team: Team }) {
-    // Lead + Assistant Lead members
+    // Main Leads
     const leads = team.members.filter((member) => {
         const position = member.position.toLowerCase().trim();
+        return position === "lead";
+    });
 
+    // Assistant Leads
+    const assistantLeads = team.members.filter((member) => {
+        const position = member.position.toLowerCase().trim();
         return (
-            position === "lead" ||
-            position === "asst. lead" 
+            position === "asst. lead" ||
         );
     });
 
-    // All members except Lead / Assistant Lead
+    // All other members
     const others = team.members.filter((member) => {
         const position = member.position.toLowerCase().trim();
 
         return (
             position !== "lead" &&
-            position !== "asst. lead" 
+            position !== "asst. lead"
         );
     });
 
@@ -32,7 +36,7 @@ export default function TeamDisplay({ team }: { team: Team }) {
                 OUR TEAM ({team.year})
             </h1>
 
-            {/* Leads & Assistant Leads */}
+            {/* ================= LEADS ================= */}
             <div className="flex flex-wrap justify-center gap-10 mb-20">
                 {leads.map((member, idx) => (
                     <div
@@ -60,7 +64,37 @@ export default function TeamDisplay({ team }: { team: Team }) {
                 ))}
             </div>
 
-            {/* Other Members */}
+            {/* ================= ASSISTANT LEADS ================= */}
+            {assistantLeads.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-10 mb-20">
+                    {assistantLeads.map((member, idx) => (
+                        <div
+                            key={idx}
+                            className="flex flex-col items-center text-center max-w-6xl"
+                        >
+                            <div className="relative w-full min-w-[300px] h-[400px] rounded-md overflow-hidden bg-gray-200">
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="object-cover"
+                                    priority={idx < 2}
+                                />
+                            </div>
+
+                            <p className="mt-4 text-lg font-semibold">
+                                {member.name}
+                            </p>
+
+                            <p className="text-md text-gray-500">
+                                {member.position}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            )}
+
+            {/* ================= OTHER MEMBERS ================= */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                 {others.map((member, idx) => (
                     <div
