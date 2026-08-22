@@ -12,7 +12,7 @@ export function SihTimeline() {
                         20-21st August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
-                        Time to code! Teams dive into the internal hackathon, crafting brilliant solutions and submitting their best ideas on the portal. 💻✨
+                        Teams participate in the Internal Hackathon, develop innovative solutions, and submit their ideas for evaluation. 💻🚀
                     </p>
                 </div>
             ),
@@ -25,7 +25,7 @@ export function SihTimeline() {
                         21st August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
-                        Ideas get a closer look! Our experts screen submissions, and teams compile and upload their detailed reports. 📊
+                        Official SIH Problem Statements are released, giving teams an opportunity to understand the challenges and align their solutions with the selected problem statements.
                     </p>
                 </div>
             ),
@@ -38,7 +38,7 @@ export function SihTimeline() {
                         August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
-                        Learn from the best! Shortlisted teams receive invaluable mentoring and training. Keep an eye out—finalist teams are announced! 🎉
+                        The results of the Internal Hackathon are announced, and the best-performing teams are identified for the next stage of the SIH selection process. 🎉
                     </p>
                 </div>
             ),
@@ -51,7 +51,7 @@ export function SihTimeline() {
                         September 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
-                        The suspense is over! The official list of students making it to the SIH Grand Finale is revealed. Did you make the cut? 👀
+                        Top teams are nominated by the institute, and their selected ideas are prepared and submitted through the official SIH portal for further evaluation. 📤🏅
                     </p>
                 </div>
             ),
@@ -64,7 +64,7 @@ export function SihTimeline() {
                         September 2026
                     </p>
                     <p className="text-neutral-200 text-lg md:text-xl font-bold">
-                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                        Submitted ideas undergo screening and evaluation by the concerned authorities to identify innovative and promising solutions for the next stage. 🔍💡
                     </p>
                 </div>
             ),
@@ -77,7 +77,7 @@ export function SihTimeline() {
                        September 2026
                     </p>
                     <p className="text-neutral-200 text-lg md:text-xl font-bold">
-                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                        The results of the screening process are published, revealing the teams and ideas that advance further in the SIH selection journey. 📢🏆
                     </p>
                 </div>
             ),
@@ -90,33 +90,33 @@ export function SihTimeline() {
                         November 2026
                     </p>
                     <p className="text-neutral-200 text-lg md:text-xl font-bold">
-                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                        Selected teams receive expert mentoring and training to refine their solutions, strengthen their prototypes, and prepare for the Grand Finale. 🧑‍🏫
                     </p>
                 </div>
             ),
         },
         {
-            title: "📣Announcement of shortlisted students or teams for SIH Grand Finale",
+            title: "📣 Announcement of shortlisted students or teams for SIH Grand Finale",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
                         November 2026
                     </p>
                     <p className="text-neutral-200 text-lg md:text-xl font-bold">
-                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                        The shortlisted students and teams for the SIH Grand Finale are officially announced. The selected teams move forward to compete at the national level. 🎉🇮🇳
                     </p>
                 </div>
             ),
         },
         {
-            title: "🥇🏆🥈🎖️🥉 SIH Grand Finale",
+            title: "🥇🏆🥈🎖️🥉  SIH Grand Finale",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
                         December 2026
                     </p>
                     <p className="text-neutral-200 text-lg md:text-xl font-bold">
-                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                        The selected teams present their solutions at the SIH Grand Finale, competing with the best teams from across India to showcase innovation and win the competition. 🏆🚀🇮🇳
                     </p>
                 </div>
             ),
