@@ -5,24 +5,11 @@ import { Timeline } from "@/components/ui/timeline";
 export function SihTimeline() {
     const data = [
         {
-            title: "🚀 Problem Statement Launch & SPOC Registration",
+            title: "👩‍💻 Internal Hackathon & Idea Submission",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        August 2026
-                    </p>
-                    <p className="text-neutral-200 text-base md:text-lg font-medium">
-                        Get ready! The official SIH problem statements drop, and SPOC (Single Point of Contact) registrations kick off. 📝
-                    </p>
-                </div>
-            ),
-        },
-        {
-            title: "💡 Internal Hackathon & Idea Submission",
-            content: (
-                <div>
-                    <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        August - September 2026
+                        20-21st August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         Time to code! Teams dive into the internal hackathon, crafting brilliant solutions and submitting their best ideas on the portal. 💻✨
@@ -31,11 +18,11 @@ export function SihTimeline() {
             ),
         },
         {
-            title: "🔍 Idea Screening & Report Submission",
+            title: "🔍 SIH Problem Statement Launch",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        September - October 2026
+                        21st August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         Ideas get a closer look! Our experts screen submissions, and teams compile and upload their detailed reports. 📊
@@ -44,11 +31,11 @@ export function SihTimeline() {
             ),
         },
         {
-            title: "🧑‍🏫 Mentoring & Result Publication",
+            title: "📝 Internal Hackthon Result",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        October 2026
+                        August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         Learn from the best! Shortlisted teams receive invaluable mentoring and training. Keep an eye out—finalist teams are announced! 🎉
@@ -57,11 +44,11 @@ export function SihTimeline() {
             ),
         },
         {
-            title: "📣 Announcement of Shortlisted Students",
+            title: "👥 Nominations of top teams and submission of ideas. ",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        November 2026
+                        September 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         The suspense is over! The official list of students making it to the SIH Grand Finale is revealed. Did you make the cut? 👀
@@ -70,7 +57,59 @@ export function SihTimeline() {
             ),
         },
         {
-            title: "🏆 Grand Finale!",
+            title: "🎬 Screening of ideas.",
+            content: (
+                <div>
+                    <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
+                        September 2026
+                    </p>
+                    <p className="text-neutral-200 text-lg md:text-xl font-bold">
+                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                    </p>
+                </div>
+            ),
+        },
+        {
+            title: "🎯 Result publication.",
+            content: (
+                <div>
+                    <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
+                       September 2026
+                    </p>
+                    <p className="text-neutral-200 text-lg md:text-xl font-bold">
+                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                    </p>
+                </div>
+            ),
+        },
+        {
+            title: "👨🏻‍🏫 Mentoring and training session ",
+            content: (
+                <div>
+                    <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
+                        November 2026
+                    </p>
+                    <p className="text-neutral-200 text-lg md:text-xl font-bold">
+                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                    </p>
+                </div>
+            ),
+        },
+        {
+            title: "📣Announcement of shortlisted students or teams for SIH Grand Finale",
+            content: (
+                <div>
+                    <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
+                        November 2026
+                    </p>
+                    <p className="text-neutral-200 text-lg md:text-xl font-bold">
+                        The ultimate showdown! Compete, innovate, and showcase your groundbreaking solutions at the SIH Grand Finale. Winners will be crowned! 🏅🥳
+                    </p>
+                </div>
+            ),
+        },
+        {
+            title: "🥇🏆🥈🎖️🥉 SIH Grand Finale",
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
