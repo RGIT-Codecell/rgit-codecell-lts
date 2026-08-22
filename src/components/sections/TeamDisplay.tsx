@@ -4,13 +4,10 @@ import { Team } from "@/lib/teams/type";
 import Image from "next/image";
 
 export default function TeamDisplay({ team }: { team: Team }) {
-    // Main Leads
     const leads = team.members.filter((member) => {
         const position = member.position.toLowerCase().trim();
         return position === "lead";
     });
-
-    // Assistant Leads
     const assistantLeads = team.members.filter((member) => {
         const position = member.position.toLowerCase().trim();
         return (
@@ -19,8 +16,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
             position === "assistant leader"
         );
     });
-
-    // All other members
     const others = team.members.filter((member) => {
         const position = member.position.toLowerCase().trim();
 
@@ -31,7 +26,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
             position !== "assistant leader"
         );
     });
-
     return (
         <section className="px-6 md:px-20 py-16 w-full">
 
@@ -39,7 +33,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
             <h1 className="text-4xl font-extrabold mb-12 text-center">
                 OUR TEAM ({team.year})
             </h1>
-
             {/* ================= LEADS ================= */}
             <div className="flex flex-wrap justify-center gap-10 mb-20">
                 {leads.map((member, idx) => (
@@ -56,7 +49,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
                                 priority={idx < 2}
                             />
                         </div>
-
                         <p className="mt-4 text-lg font-semibold">
                             {member.name}
                         </p>
@@ -67,7 +59,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
                     </div>
                 ))}
             </div>
-
             {/* ================= ASSISTANT LEADS ================= */}
             {assistantLeads.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-10 mb-20">
@@ -97,7 +88,6 @@ export default function TeamDisplay({ team }: { team: Team }) {
                     ))}
                 </div>
             )}
-
             {/* ================= OTHER MEMBERS ================= */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                 {others.map((member, idx) => (
@@ -114,18 +104,15 @@ export default function TeamDisplay({ team }: { team: Team }) {
                                 loading="lazy"
                             />
                         </div>
-
                         <p className="mt-4 text-lg font-semibold">
                             {member.name}
                         </p>
-
                         <p className="text-md text-gray-500">
                             {member.position}
                         </p>
                     </div>
                 ))}
             </div>
-
         </section>
     );
 }
