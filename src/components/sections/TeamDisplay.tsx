@@ -15,6 +15,8 @@ export default function TeamDisplay({ team }: { team: Team }) {
         const position = member.position.toLowerCase().trim();
         return (
             position === "asst. lead" ||
+            position === "assistant lead" ||
+            position === "assistant leader"
         );
     });
 
@@ -24,7 +26,9 @@ export default function TeamDisplay({ team }: { team: Team }) {
 
         return (
             position !== "lead" &&
-            position !== "asst. lead"
+            position !== "asst. lead" &&
+            position !== "assistant lead" &&
+            position !== "assistant leader"
         );
     });
 
