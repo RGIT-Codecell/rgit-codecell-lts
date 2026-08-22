@@ -7,6 +7,8 @@ import { Team21_22 } from "@/lib/teams/21_22";
 import { Team22_23 } from "@/lib/teams/22_23";
 import { Team23_24 } from "@/lib/teams/23_24";
 import { Team24_25 } from "@/lib/teams/24_25";
+import { Team25_26 } from "@/lib/teams/25_26";
+import { Team26_27 } from "@/lib/teams/26_27";
 
 import { FACULTY } from "@/lib/teams/type";
 import Image from "next/image";
@@ -17,6 +19,8 @@ const TEAMS = [
     Team22_23,
     Team23_24,
     Team24_25,
+    Team25_26,
+    Team26_27,
 ];
 
 export default function OurTeam() {
