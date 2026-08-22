@@ -4,26 +4,6 @@ export const Team25_26: Team = {
     year: "2025-2026",
     members: [
         {
-            name: "Sahil Malgundkar",
-            position: "President",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069179/Pranav_Iskande_ob0sp7.jpg"
-        },
-        {
-            name: "Yashraj Gavale",
-            position: "Managing Director",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069170/Mohammad_Razeen_Sayyed_n22d6g.jpg"
-        },
-        {
-            name: "Ashiwarya Gupta",
-            position: "Vice President",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069179/Amaan_Ansari_pl3fen.jpg"
-        },
-        {
-            name: "Dhirendra Lohar",
-            position: "Lead",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069169/Sejal_Ghadge_y5sg10.jpg"
-        },
-        {
             name: "Arya Patil",
             position: "Lead",
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069173/Ketan_Chavan_eun9qa.jpg"
@@ -47,11 +27,6 @@ export const Team25_26: Team = {
             name: "Raj Panchal",
             position: "General Secretary",
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750073999/Yashraj_Gavale_c9bhqy_tdqoai.jpg"
-        },
-        {
-            name: "Kajal Gupta",
-            position: "Treasurer",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069173/Harshita_Patil_ejvc3m.jpg"
         },
         {
             name: "Ayaan Memon",
