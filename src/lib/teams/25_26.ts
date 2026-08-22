@@ -9,9 +9,9 @@ export const Team25_26: Team = {
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069167/Arya_Patil_i1wieb.png"
         },
         {
-            name: "Mohit Jain",
+            name: "Dharamraj Rathod",
             position: "Asst. Lead",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787394513/Mohit Jain.png"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069088/Dharmaraj_Rathod_assistant_lead_b9yjd0.jpg"
         },
         {
             name: "Harshita Patil",
