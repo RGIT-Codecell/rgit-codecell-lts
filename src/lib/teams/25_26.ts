@@ -71,7 +71,7 @@ export const Team25_26: Team = {
         {
                name: "Ravi Singh",
                position: "Marketing Secretary",
-               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398017/Screenshot_2026-08-22_165638_ba5huv.png"
+               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787399176/Ravi_Singh_nhfo6s.jpg"
         },
         {
                name: "Manas Deshpande",
