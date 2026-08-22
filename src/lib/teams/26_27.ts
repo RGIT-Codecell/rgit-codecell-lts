@@ -4,14 +4,14 @@ export const Team26_27: Team = {
     year: "2026-2027",
     members: [
         {
-          name: "Kruitka Bhere",
-          position: "Lead",
-          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396462/krutika_Bhere_dpep9u.webp"
-        },
-        {
           name: "Yug Chaphekar",
           position: "Lead",
           image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398554/Yug_Chaphekar_leoxsh.webp"
+        },
+        {
+          name: "Kruitka Bhere",
+          position: "Lead",
+          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396462/krutika_Bhere_dpep9u.webp"
         },
         {
           name: "Vishal Barai",
