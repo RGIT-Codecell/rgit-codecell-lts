@@ -9,7 +9,7 @@ export const Team25_26: Team = {
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069167/Arya_Patil_i1wieb.png"
         },
         {
-            name: "Dharamraj Rathod",
+            name: "Mohit Jain",
             position: "Asst. Lead",
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069088/Dharmaraj_Rathod_assistant_lead_b9yjd0.jpg"
         },
@@ -21,77 +21,77 @@ export const Team25_26: Team = {
         {
             name: "Diksha Patil",
             position: "General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069165/Sakshi_Shinde_e3nzs2.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396963/diksha-gs-25_dx7d6x.webp"
         },
         {
             name: "Raj Panchal",
             position: "General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750073999/Yashraj_Gavale_c9bhqy_tdqoai.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396668/raj_panchal_gpxpgy.webp"
         },
         {
             name: "Ayaan Memon",
             position: "Jt. General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069166/Aditya_Pol_h44rmg.heic"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787397106/Ayaan_Memon_kvocj1.webp"
         },
         {
             name: "Kruitka Bhere",
             position: "Jt. General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069164/Raj_Panchal_hygtqo.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396462/krutika_Bhere_dpep9u.webp"
         },
         {
             name: "Jhanvi Holkar",
             position: "Jt. General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069166/Sahil_Malgundkar_owf4mx.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396462/Jhanvi_Holkar_xmojtf.webp"
         },
         {
             name: "Sarthak Avhad",
             position: "Jt. General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069177/shubham_zlqzdi.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787394197/Sarthak_Avhad_svuo0m.jpg"
         },
         {
             name: "Vishal Barai",
             position: "Web Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069175/Garima_Dwivedi_ym51zg.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396462/Vishal_Barai_fbm3mz.webp"
         },
         {
             name: "Navdeep Balgoni",
             position: "Technical/ A&V Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069175/Aadish_msgct7.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787397216/Navdeep_Balgoni_ugf1w8.webp"
         },
         {
             name: "Yug Chaphekar",
             position: "Digital Creative Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069181/Gargi_Hawaldar_uatxxe.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787397273/Yug_Chaphekar_qti9wo.webp"
         },
         {
             name: "Viraj Bhabad",
             position: "Social Media Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069182/Aryan_Jangid_x0pulg.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787397319/Viraj_Bhabad_rdequ3.webp"
         },
         {
                name: "Ravi Singh",
                position: "Marketing Secretary",
-               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069183/Pranav_Iskande_qjvqje.jpg"
+               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398017/Screenshot_2026-08-22_165638_ba5huv.png"
         },
         {
                name: "Manas Deshpande",
                position: "Publicity Secretary",
-               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069184/Mohammad_Razeen_Sayyed_ayjv0g.jpg"
+               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398073/Manas_Deshpande_ftzsbg.webp"
         },
         {
               name: "Om Parab",
               position: "Publicity Secretary",
-              image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069184/Mohammad_Razeen_Sayyed_ayjv0g.jpg"
+              image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398131/om_mmnqwo.webp"
         },
         {
                name: "Hrishita Chavan",
                position: "Content & Editorial Secretary",
-               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069185/Amaan_Ansari_ayjv0g.jpg"
+               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398240/Hrishita_Chavan_sxv4ai.webp"
         },
         {
                name: "Aangee Jain",
                position: "Event Management Secretary",
-               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069186/Dhirendra_Lohar_ayjv0g.jpg"
+               image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787398377/Screenshot_2026-08-22_170241_z9yuly.png"
         }
     ]
 }
