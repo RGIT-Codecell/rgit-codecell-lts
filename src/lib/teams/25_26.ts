@@ -6,7 +6,7 @@ export const Team25_26: Team = {
         {
             name: "Arya Patil",
             position: "Lead",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069173/Ketan_Chavan_eun9qa.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069167/Arya_Patil_i1wieb.png"
         },
         {
             name: "Mohit Jain",
