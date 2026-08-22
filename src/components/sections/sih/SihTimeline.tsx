@@ -9,7 +9,7 @@ export function SihTimeline() {
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        20-21st August 2026
+                        20-21<sup>st</sup> August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         Teams participate in the Internal Hackathon, develop innovative solutions, and submit their ideas for evaluation. 💻🚀
@@ -22,7 +22,7 @@ export function SihTimeline() {
             content: (
                 <div>
                     <p className="text-foreground/70 text-sm md:text-base font-semibold mb-4">
-                        21st August 2026
+                        21<sup>st</sup> August 2026
                     </p>
                     <p className="text-neutral-200 text-base md:text-lg font-medium">
                         Official SIH Problem Statements are released, giving teams an opportunity to understand the challenges and align their solutions with the selected problem statements.
