@@ -5,9 +5,10 @@ import Image from "next/image";
 
 export default function TeamDisplay({ team }: { team: Team }) {
     const leads = team.members.filter(
-        (member) => member.position.toLowerCase() === "lead" ||
-                    member.position.toLowerCase() === "Asst.Lead"
-    );
+    (member) =>
+        member.position.toLowerCase() === "lead" ||
+        member.position.toLowerCase() === "assistant lead"
+);
 
     const others = team.members.filter(
         (member) => !member.position.toLowerCase().includes("lead")
