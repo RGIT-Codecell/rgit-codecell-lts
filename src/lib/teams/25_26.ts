@@ -4,6 +4,11 @@ export const Team25_26: Team = {
     year: "2025-2026",
     members: [
         {
+            name: "Dhirendra lohar",
+            position: "Lead",
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787396962/Dhruv_lohar_bdiyyi.webp"
+        },
+        {
             name: "Arya Patil",
             position: "Lead",
             image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069167/Arya_Patil_i1wieb.png"
