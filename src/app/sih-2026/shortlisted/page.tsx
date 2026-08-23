@@ -613,6 +613,23 @@ function TeamCard({
                   </p>
                 </div>
               </div>
+
+              {/* PS ID */}
+              <div className="rounded-xl bg-zinc-950 border border-zinc-900 px-2.5 py-3 hover:border-[#D4AF37]/30 transition-colors">
+                <Tag className="w-3.5 h-3.5 mx-auto text-[#D4AF37] mb-1.5" />
+
+                <p className="text-[8px] uppercase tracking-wider text-gray-600 font-bold">
+                  PS ID
+                </p>
+
+                <p
+                  className="mt-1 text-[11px] text-[#D4AF37] font-mono font-semibold truncate"
+                  title={team.psId}
+                >
+                  {team.psId}
+                </p>
+              </div>
+
             </div>
           </div>
 
@@ -627,6 +644,7 @@ function TeamCard({
               className={`w-4 h-4 text-zinc-600 ${chevronHover} group-hover:translate-x-1 transition-all`}
             />
           </div>
+
         </div>
       </div>
     </motion.div>
