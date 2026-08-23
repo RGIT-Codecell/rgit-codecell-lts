@@ -424,36 +424,6 @@ export default function SihShortlistedPage() {
    STAT COMPONENT
 ============================================================= */
 
-function Stat({
-  icon,
-  value,
-  label,
-}: {
-  icon: React.ReactNode;
-  value: number;
-  label: string;
-}) {
-  return (
-    <div className="relative px-4 py-5 md:px-8 md:py-6 border-r last:border-r-0 border-zinc-800">
-      <div className="flex justify-center text-[#D4AF37] mb-2">
-        {icon}
-      </div>
-
-      <div className="text-2xl md:text-3xl font-black text-white">
-        {value}
-      </div>
-
-      <div className="mt-1 text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-500">
-        {label}
-      </div>
-    </div>
-  );
-}
-
-/* =============================================================
-   TEAM CARD
-============================================================= */
-
 function TeamCard({
   team,
   index,
@@ -473,33 +443,40 @@ function TeamCard({
         duration: 0.45,
         delay: Math.min(index * 0.035, 0.5),
       }}
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -7 }}
       className="group relative"
     >
-      {/* Glow */}
-      <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-[#8B0000]/0 via-[#8B0000]/0 to-[#8B0000]/0 group-hover:from-[#8B0000]/40 group-hover:to-[#D4AF37]/10 transition-all duration-500 blur-sm" />
+      {/* Outer Glow */}
+      <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-[#8B0000]/0 via-[#8B0000]/0 to-[#D4AF37]/0 group-hover:from-[#8B0000]/40 group-hover:via-[#8B0000]/10 group-hover:to-[#D4AF37]/20 transition-all duration-500 blur-sm" />
 
-      <div className="relative h-full rounded-2xl border border-zinc-800 bg-[#080808] overflow-hidden transition-all duration-500 group-hover:border-[#8B0000]/50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      <div className="relative min-h-[330px] rounded-2xl border border-zinc-800 bg-[#080808] overflow-hidden transition-all duration-500 group-hover:border-[#8B0000]/50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
-        {/* Top accent */}
+        {/* Top Accent */}
         <div
-          className={`
-            absolute top-0 left-0 right-0 h-[2px]
-            ${
-              isSoftware
-                ? "bg-gradient-to-r from-transparent via-blue-500/70 to-transparent"
-                : "bg-gradient-to-r from-transparent via-amber-500/70 to-transparent"
-            }
-          `}
+          className={`absolute top-0 left-0 right-0 h-[2px] ${
+            isSoftware
+              ? "bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+              : "bg-gradient-to-r from-transparent via-amber-500 to-transparent"
+          }`}
         />
 
-        <div className="p-6">
+        {/* Subtle Background Glow */}
+        <div
+          className={`absolute top-[-100px] left-1/2 -translate-x-1/2 w-48 h-48 rounded-full blur-[100px] opacity-0 group-hover:opacity-30 transition-opacity duration-500 ${
+            isSoftware ? "bg-blue-500" : "bg-amber-500"
+          }`}
+        />
 
-          {/* Header */}
+        <div className="relative h-full p-6 flex flex-col">
+
+          {/* =====================================================
+              TOP ROW
+          ===================================================== */}
+
           <div className="flex items-center justify-between">
 
-            {/* Number */}
-            <div className="relative">
+            {/* Team Number */}
+            <div className="flex items-center gap-2">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800">
                 <Hash className="w-3.5 h-3.5 text-[#D4AF37]" />
 
@@ -511,15 +488,11 @@ function TeamCard({
 
             {/* Category */}
             <div
-              className={`
-                flex items-center gap-1.5 px-3 py-1.5 rounded-full
-                text-[10px] font-bold uppercase tracking-wider border
-                ${
-                  isSoftware
-                    ? "bg-blue-950/30 text-blue-400 border-blue-900/50"
-                    : "bg-amber-950/30 text-amber-400 border-amber-900/50"
-                }
-              `}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${
+                isSoftware
+                  ? "bg-blue-950/30 text-blue-400 border-blue-900/50"
+                  : "bg-amber-950/30 text-amber-400 border-amber-900/50"
+              }`}
             >
               {isSoftware ? (
                 <Cpu className="w-3 h-3" />
@@ -531,83 +504,108 @@ function TeamCard({
             </div>
           </div>
 
-          {/* Team name */}
-          <div className="mt-6 min-h-[64px]">
-            <h3 className="text-xl font-bold text-white leading-tight group-hover:text-[#D4AF37] transition-colors duration-300">
+          {/* =====================================================
+              TEAM NAME
+          ===================================================== */}
+
+          <div className="flex-1 flex flex-col items-center justify-center text-center py-8">
+
+            <p className="text-[9px] uppercase tracking-[0.3em] text-gray-600 font-bold mb-3">
+              Team
+            </p>
+
+            <h3 className="text-2xl md:text-[27px] font-black tracking-tight leading-tight text-white group-hover:text-[#D4AF37] transition-colors duration-300 max-w-[90%]">
               {team.teamName}
             </h3>
-          </div>
 
-          {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-zinc-800 via-zinc-800/50 to-transparent my-5" />
+            {/* Decorative line */}
+            <div className="flex items-center gap-2 mt-5">
+              <div className="w-8 h-px bg-zinc-800" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#8B0000] shadow-[0_0_8px_rgba(139,0,0,0.8)]" />
+              <div className="w-8 h-px bg-zinc-800" />
+            </div>
 
-          {/* Details */}
-          <div className="space-y-4">
+            {/* =================================================
+                TEAM DETAILS
+            ================================================= */}
 
-            {/* Leader */}
-            <div className="flex gap-3">
-              <div className="shrink-0 w-9 h-9 rounded-lg bg-[#8B0000]/10 border border-[#8B0000]/20 flex items-center justify-center">
-                <User className="w-4 h-4 text-[#8B0000]" />
-              </div>
+            <div className="mt-6 w-full grid grid-cols-3 gap-2">
 
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-gray-600 font-bold">
-                  Team Leader
+              {/* Leader */}
+              <div className="rounded-xl bg-zinc-950 border border-zinc-900 px-2.5 py-3 hover:border-[#8B0000]/30 transition-colors">
+                <User className="w-3.5 h-3.5 mx-auto text-[#8B0000] mb-1.5" />
+
+                <p className="text-[8px] uppercase tracking-wider text-gray-600 font-bold">
+                  Leader
                 </p>
 
-                <p className="mt-0.5 text-sm text-gray-200 font-medium truncate">
+                <p
+                  className="mt-1 text-[11px] text-gray-200 font-medium truncate"
+                  title={team.leaderName}
+                >
                   {team.leaderName}
                 </p>
               </div>
-            </div>
 
-            {/* PS ID */}
-            <div className="flex gap-3">
-              <div className="shrink-0 w-9 h-9 rounded-lg bg-[#D4AF37]/5 border border-[#D4AF37]/10 flex items-center justify-center">
-                <Tag className="w-4 h-4 text-[#D4AF37]" />
-              </div>
+              {/* Department */}
+              <div className="rounded-xl bg-zinc-950 border border-zinc-900 px-2.5 py-3 hover:border-[#8B0000]/30 transition-colors">
+                <Building2 className="w-3.5 h-3.5 mx-auto text-[#8B0000] mb-1.5" />
 
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-gray-600 font-bold">
-                  Problem Statement
-                </p>
-
-                <p className="mt-0.5 text-sm text-[#D4AF37] font-mono font-semibold truncate">
-                  {team.psId}
-                </p>
-              </div>
-            </div>
-
-            {/* Department */}
-            <div className="flex gap-3">
-              <div className="shrink-0 w-9 h-9 rounded-lg bg-[#8B0000]/10 border border-[#8B0000]/20 flex items-center justify-center">
-                <Building2 className="w-4 h-4 text-[#8B0000]" />
-              </div>
-
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-gray-600 font-bold">
+                <p className="text-[8px] uppercase tracking-wider text-gray-600 font-bold">
                   Department
                 </p>
 
-                <p className="mt-0.5 text-sm text-gray-400 truncate">
+                <p
+                  className="mt-1 text-[11px] text-gray-300 font-medium truncate"
+                  title={team.department}
+                >
                   {team.department}
                 </p>
               </div>
+
+              {/* PS ID */}
+              <div className="rounded-xl bg-zinc-950 border border-zinc-900 px-2.5 py-3 hover:border-[#D4AF37]/30 transition-colors">
+                <Tag className="w-3.5 h-3.5 mx-auto text-[#D4AF37] mb-1.5" />
+
+                <p className="text-[8px] uppercase tracking-wider text-gray-600 font-bold">
+                  PS ID
+                </p>
+
+                <p
+                  className="mt-1 text-[11px] text-[#D4AF37] font-mono font-semibold truncate"
+                  title={team.psId}
+                >
+                  {team.psId}
+                </p>
+              </div>
+
             </div>
           </div>
 
-          {/* Bottom */}
-          <div className="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
+          {/* =====================================================
+              BOTTOM
+          ===================================================== */}
 
-            <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-gray-600">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
-              Shortlisted
+          <div className="pt-4 border-t border-zinc-900 flex items-center justify-between">
+
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-50 animate-ping" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+              </span>
+
+              <span className="text-[9px] uppercase tracking-[0.2em] text-gray-600 font-bold">
+                Shortlisted
+              </span>
             </div>
 
-            <ChevronRight
-              className="w-4 h-4 text-zinc-700 group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all"
-            />
+            <div className="flex items-center gap-1 text-[9px] uppercase tracking-wider text-gray-700 group-hover:text-[#D4AF37] transition-colors">
+              SIH 2026
+              <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            </div>
+
           </div>
+
         </div>
       </div>
     </motion.div>
