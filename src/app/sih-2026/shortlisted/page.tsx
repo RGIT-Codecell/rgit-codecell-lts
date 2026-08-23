@@ -5,15 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   Trophy,
-  User,
-  Hash,
-  Tag,
-  Building2,
   Layers,
-  Sparkles,
   Cpu,
   X,
-  ChevronRight,
   Award,
   Target,
 } from "lucide-react";
@@ -87,7 +81,7 @@ export default function SihShortlistedPage() {
           HERO
       ========================================================= */}
 
-      <section className="relative min-h-[680px] flex items-center justify-center px-6 md:px-12 pt-20 pb-28 overflow-hidden">
+      <section className="relative min-h-[600px] flex items-center justify-center px-6 md:px-12 pt-20 pb-20 overflow-hidden">
 
         {/* Background */}
         <div className="absolute inset-0">
@@ -116,8 +110,8 @@ export default function SihShortlistedPage() {
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#F26522]/50 bg-[#F26522]/10 backdrop-blur-xl text-[#F26522] text-xs md:text-sm font-bold uppercase tracking-[0.2em]"
           >
             <span className="relative flex h-2 w-2">
-              {/* <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F26522] opacity-75" /> */}
-              {/* <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F26522]" /> */}
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F26522] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F26522]" />
             </span>
 
             <Trophy className="w-4 h-4 text-[#F26522]" />
@@ -132,7 +126,7 @@ export default function SihShortlistedPage() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mt-8"
           >
-            <p className="text-[#F26522] uppercase tracking-[0.35em] text-3xl md:text-4xl font-bold mb-4">
+            <p className="text-[#F26522] uppercase tracking-[0.35em] text-2xl md:text-4xl font-bold mb-4">
               Smart India Hackathon 2026
             </p>
 
@@ -202,7 +196,6 @@ export default function SihShortlistedPage() {
         >
           <div className="flex items-end justify-between gap-4">
             <div>
-
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                 Meet the shortlisted teams
               </h2>
@@ -323,14 +316,14 @@ export default function SihShortlistedPage() {
         </div>
 
         {/* =====================================================
-            TEAM GRID (Strict 3 columns on tablet/desktop)
+            TEAM GRID (3 columns landscape ratio)
         ===================================================== */}
 
         <AnimatePresence mode="popLayout">
           {filteredTeams.length > 0 ? (
             <motion.div
               layout
-              className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6"
+              className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
             >
               {filteredTeams.map((team, index) => (
                 <TeamCard
@@ -345,23 +338,23 @@ export default function SihShortlistedPage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="mt-8 py-24 rounded-3xl border border-zinc-800 bg-zinc-950 text-center"
+              className="mt-8 py-20 rounded-2xl border border-zinc-800 bg-zinc-950 text-center"
             >
-              <div className="mx-auto w-16 h-16 rounded-2xl bg-[#00A651]/10 border border-[#00A651]/30 flex items-center justify-center">
-                <Search className="w-7 h-7 text-[#00A651]" />
+              <div className="mx-auto w-14 h-14 rounded-2xl bg-[#00A651]/10 border border-[#00A651]/30 flex items-center justify-center">
+                <Search className="w-6 h-6 text-[#00A651]" />
               </div>
 
-              <h3 className="mt-6 text-xl font-bold text-white">
+              <h3 className="mt-5 text-lg font-bold text-white">
                 No teams found
               </h3>
 
-              <p className="mt-2 text-gray-400 text-sm">
+              <p className="mt-1 text-gray-400 text-sm">
                 No shortlisted team matches your current search or filter.
               </p>
 
               <button
                 onClick={clearFilters}
-                className="mt-6 px-6 py-3 rounded-xl bg-[#00A651] hover:bg-[#008744] text-white text-xs font-bold uppercase tracking-wider transition-all"
+                className="mt-5 px-5 py-2.5 rounded-xl bg-[#00A651] hover:bg-[#008744] text-white text-xs font-bold uppercase tracking-wider transition-all"
               >
                 Reset Filters
               </button>
@@ -374,7 +367,7 @@ export default function SihShortlistedPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative mt-16 overflow-hidden rounded-3xl border border-[#00A651]/30 bg-zinc-950 p-8 md:p-10"
+          className="relative mt-16 overflow-hidden rounded-2xl border border-[#00A651]/30 bg-zinc-950 p-6 md:p-8"
         >
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
@@ -383,11 +376,11 @@ export default function SihShortlistedPage() {
                 Congratulations
               </div>
 
-              <h3 className="mt-3 text-2xl md:text-3xl font-bold text-white">
+              <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">
                 The journey starts here.
               </h3>
 
-              <p className="mt-2 text-gray-400 text-sm max-w-xl">
+              <p className="mt-1 text-gray-400 text-sm max-w-xl">
                 Every shortlisted team has earned its place. Best wishes to
                 all teams representing RGIT at SIH 2026.
               </p>
@@ -428,8 +421,8 @@ function Stat({
   label: string;
 }) {
   return (
-    <div className="relative px-4 py-5 md:px-8 md:py-6 border-r last:border-r-0 border-zinc-800 text-center">
-      <div className="flex justify-center mb-2">
+    <div className="relative px-4 py-4 md:px-8 md:py-5 border-r last:border-r-0 border-zinc-800 text-center">
+      <div className="flex justify-center mb-1">
         {icon}
       </div>
 
@@ -437,7 +430,7 @@ function Stat({
         {value}
       </div>
 
-      <div className="mt-1 text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">
+      <div className="mt-0.5 text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">
         {label}
       </div>
     </div>
@@ -445,7 +438,9 @@ function Stat({
 }
 
 /* =============================================================
-   TEAM CARD
+   MINIMAL LANDSCAPE TEAM CARD
+   - Aspect ratio: Width > Height
+   - Top-left: #SR_NO, Top-right: SOFTWARE / HARDWARE Category
    - Column 1 (index % 3 === 0): Border Green (#00A651)
    - Column 2 (index % 3 === 1): Border White (#FFFFFF)
    - Column 3 (index % 3 === 2): Border Orange (#F26522)
@@ -463,188 +458,81 @@ function TeamCard({
 
   // Determine card border & accent colors based on column
   let borderColor = "border-[#00A651]";
-  let hoverShadow = "hover:shadow-[0_10px_30px_rgba(0,166,81,0.15)]";
-  let badgeBorder = "border-[#00A651]/40 bg-[#00A651]/10 text-[#00A651]";
-  let hashIconColor = "text-[#00A651]";
-  let psIdColor = "text-[#00A651]";
+  let hoverShadow = "hover:shadow-[0_8px_25px_rgba(0,166,81,0.15)]";
+  let srNoColor = "text-[#00A651]";
   let titleHover = "group-hover:text-[#00A651]";
-  let iconBoxStyle = "bg-[#00A651]/10 border-[#00A651]/30 text-[#00A651]";
-  let chevronHover = "group-hover:text-[#00A651]";
 
   if (columnIndex === 1) {
     // Column 2: White Border
-    borderColor = "border-white";
-    hoverShadow = "hover:shadow-[0_10px_30px_rgba(255,255,255,0.15)]";
-    badgeBorder = "border-white/40 bg-white/10 text-white";
-    hashIconColor = "text-white";
-    psIdColor = "text-white";
+    borderColor = "border-white/80";
+    hoverShadow = "hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)]";
+    srNoColor = "text-white";
     titleHover = "group-hover:text-white";
-    iconBoxStyle = "bg-white/10 border-white/30 text-white";
-    chevronHover = "group-hover:text-white";
   } else if (columnIndex === 2) {
     // Column 3: Orange Border
     borderColor = "border-[#F26522]";
-    hoverShadow = "hover:shadow-[0_10px_30px_rgba(242,101,34,0.15)]";
-    badgeBorder = "border-[#F26522]/40 bg-[#F26522]/10 text-[#F26522]";
-    hashIconColor = "text-[#F26522]";
-    psIdColor = "text-[#F26522]";
+    hoverShadow = "hover:shadow-[0_8px_25px_rgba(242,101,34,0.15)]";
+    srNoColor = "text-[#F26522]";
     titleHover = "group-hover:text-[#F26522]";
-    iconBoxStyle = "bg-[#F26522]/10 border-[#F26522]/30 text-[#F26522]";
-    chevronHover = "group-hover:text-[#F26522]";
   }
 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, y: 25 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{
-        duration: 0.4,
-        delay: Math.min(index * 0.03, 0.4),
+        duration: 0.35,
+        delay: Math.min(index * 0.025, 0.3),
       }}
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -4 }}
       className="group relative h-full"
     >
       <div
         className={`
-          relative h-full rounded-2xl border-2 ${borderColor} bg-[#080808]
-          overflow-hidden transition-all duration-300 ${hoverShadow}
+          relative h-full rounded-xl border-2 ${borderColor} bg-[#0a0a0a]
+          p-5 flex flex-col justify-between transition-all duration-300 ${hoverShadow}
         `}
       >
-        <div className="p-6 flex flex-col h-full justify-between">
-          <div>
-            {/* Header */}
-            <div className="flex items-center justify-between">
+        {/* Top Line: #SR_NO on Left, Software/Hardware Badge on Right */}
+        <div>
+          <div className="flex items-center justify-between gap-2 mb-3">
+            <span className={`font-mono text-xs font-bold ${srNoColor}`}>
+              #{String(team.srNo).padStart(2, "0")}
+            </span>
 
-              {/* Number */}
-              <div className="relative">
-                <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border ${badgeBorder}`}>
-                  <Hash className={`w-3.5 h-3.5 ${hashIconColor}`} />
-
-                  <span className="font-mono text-xs font-bold">
-                    {String(team.srNo).padStart(2, "0")}
-                  </span>
-                </div>
-              </div>
-
-              {/* Category */}
-              <div
-                className={`
-                  flex items-center gap-1.5 px-3 py-1.5 rounded-full
-                  text-[10px] font-bold uppercase tracking-wider border
-                  ${
-                    isSoftware
-                      ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
-                      : "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40"
-                  }
-                `}
-              >
-                {isSoftware ? (
-                  <Cpu className="w-3 h-3" />
-                ) : (
-                  <Target className="w-3 h-3" />
-                )}
-
-                {team.category}
-              </div>
-            </div>
-
-            {/* Team name */}
-            <div className="mt-6 min-h-[60px]">
-              <h3 className={`text-xl font-bold text-white leading-tight ${titleHover} transition-colors duration-300`}>
-                {team.teamName}
-              </h3>
-            </div>
-
-            {/* Divider */}
-            <div className="h-px bg-zinc-800 my-5" />
-
-            {/* Details */}
-            <div className="space-y-4">
-
-              {/* Leader */}
-              <div className="flex gap-3 items-center">
-                <div className={`shrink-0 w-9 h-9 rounded-lg border flex items-center justify-center ${iconBoxStyle}`}>
-                  <User className="w-4 h-4" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">
-                    Team Leader
-                  </p>
-
-                  <p className="mt-0.5 text-sm text-gray-200 font-medium truncate">
-                    {team.leaderName}
-                  </p>
-                </div>
-              </div>
-
-              {/* PS ID */}
-              <div className="flex gap-3 items-center">
-                <div className={`shrink-0 w-9 h-9 rounded-lg border flex items-center justify-center ${iconBoxStyle}`}>
-                  <Tag className="w-4 h-4" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">
-                    Problem Statement
-                  </p>
-
-                  <p className={`mt-0.5 text-sm ${psIdColor} font-mono font-semibold truncate`}>
-                    {team.psId}
-                  </p>
-                </div>
-              </div>
-
-              {/* Department */}
-              <div className="flex gap-3 items-center">
-                <div className={`shrink-0 w-9 h-9 rounded-lg border flex items-center justify-center ${iconBoxStyle}`}>
-                  <Building2 className="w-4 h-4" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">
-                    Department
-                  </p>
-
-                  <p className="mt-0.5 text-sm text-gray-300 truncate">
-                    {team.department}
-                  </p>
-                </div>
-              </div>
-
-              {/* PS ID */}
-              <div className="rounded-xl bg-zinc-950 border border-zinc-900 px-2.5 py-3 hover:border-[#D4AF37]/30 transition-colors">
-                <Tag className="w-3.5 h-3.5 mx-auto text-[#D4AF37] mb-1.5" />
-
-                <p className="text-[8px] uppercase tracking-wider text-gray-600 font-bold">
-                  PS ID
-                </p>
-
-                <p
-                  className="mt-1 text-[11px] text-[#D4AF37] font-mono font-semibold truncate"
-                  title={team.psId}
-                >
-                  {team.psId}
-                </p>
-              </div>
-
-            </div>
+            <span
+              className={`
+                text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border
+                ${
+                  isSoftware
+                    ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
+                    : "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40"
+                }
+              `}
+            >
+              {team.category}
+            </span>
           </div>
 
-          {/* Card Footer */}
-          <div className="mt-6 pt-4 border-t border-zinc-900 flex items-center justify-between">
-            <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-gray-400">
-              <span className={`w-2 h-2 rounded-full ${columnIndex === 0 ? "bg-[#00A651]" : columnIndex === 1 ? "bg-white" : "bg-[#F26522]"}`} />
-              Shortlisted
-            </div>
+          {/* Team Name */}
+          <h3 className={`text-base md:text-lg font-bold text-white tracking-tight leading-snug ${titleHover} transition-colors line-clamp-1`}>
+            {team.teamName}
+          </h3>
+        </div>
 
-            <ChevronRight
-              className={`w-4 h-4 text-zinc-600 ${chevronHover} group-hover:translate-x-1 transition-all`}
-            />
+        {/* Bottom Metadata: Leader on Left, Department on Right */}
+        <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between gap-4 text-xs">
+          <div className="min-w-0">
+            <span className="text-gray-500 text-[10px] uppercase font-bold tracking-wider block">Leader</span>
+            <span className="text-gray-200 font-medium truncate block">{team.leaderName}</span>
           </div>
 
+          <div className="min-w-0 text-right">
+            <span className="text-gray-500 text-[10px] uppercase font-bold tracking-wider block">Dept</span>
+            <span className="text-gray-300 font-medium truncate block">{team.department}</span>
+          </div>
         </div>
       </div>
     </motion.div>
