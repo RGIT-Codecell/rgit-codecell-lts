@@ -22,7 +22,7 @@ export default function Hero() {
         <Button variant="outline" size="lg" className="w-full md:w-auto">
           Explore
         </Button>
-        <Link href="/sih-2026/shortlisted" className="w-full md:w-auto">
+        <Link href="/sih-2026" className="w-full md:w-auto">
           <Button size="lg" className="w-full md:w-auto">
             Checkout SIH 2026
             <ArrowRight className="-rotate-[35deg]" />
