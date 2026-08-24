@@ -227,14 +227,14 @@ export default function SihShortlistedPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {firstPlaceTeams.map((team, idx) => (
                 <WinnerCard key={team.srNo} team={team} index={idx} rankType="1st" />
               ))}
             </div>
           </div>
 
-          {/* 2nd & 3rd Place (Same card sizing in 3-column grid) */}
+          {/* 2nd & 3rd Place (Same card sizing in 2-column grid) */}
           <div>
             <div className="mb-4">
               <h3 className="text-lg md:text-xl font-bold text-white tracking-tight">
@@ -245,7 +245,7 @@ export default function SihShortlistedPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {secondPlaceTeam && (
                 <WinnerCard team={secondPlaceTeam} index={0} rankType="2nd" />
               )}
