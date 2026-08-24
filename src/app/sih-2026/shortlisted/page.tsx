@@ -620,10 +620,11 @@ function TeamCard({
   const columnIndex = index % 3;
 
   // Determine card border & accent colors based on column
-  let borderColor = "border-[#00A651]";
-  let hoverShadow = "hover:shadow-[0_8px_25px_rgba(0,166,81,0.15)]";
-  let srNoColor = "text-[#00A651]";
-  let titleHover = "group-hover:text-[#00A651]";
+  // Default for Col 1 (index % 3 === 0): Orange Border
+  let borderColor = "border-[#F26522]";
+  let hoverShadow = "hover:shadow-[0_8px_25px_rgba(242,101,34,0.15)]";
+  let srNoColor = "text-[#F26522]";
+  let titleHover = "group-hover:text-[#F26522]";
 
   if (isWaiting) {
     borderColor = "border-amber-500/70";
@@ -637,11 +638,11 @@ function TeamCard({
     srNoColor = "text-white";
     titleHover = "group-hover:text-white";
   } else if (columnIndex === 2) {
-    // Column 3: Orange Border
-    borderColor = "border-[#F26522]";
-    hoverShadow = "hover:shadow-[0_8px_25px_rgba(242,101,34,0.15)]";
-    srNoColor = "text-[#F26522]";
-    titleHover = "group-hover:text-[#F26522]";
+    // Column 3: Green Border
+    borderColor = "border-[#00A651]";
+    hoverShadow = "hover:shadow-[0_8px_25px_rgba(0,166,81,0.15)]";
+    srNoColor = "text-[#00A651]";
+    titleHover = "group-hover:text-[#00A651]";
   }
 
   return (
