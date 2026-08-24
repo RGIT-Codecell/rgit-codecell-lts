@@ -11,6 +11,7 @@ import {
   Award,
   Target,
   Clock,
+  Sparkles,
 } from "lucide-react";
 
 import shortlistedTeams from "@/data/sih-2026-shortlisted-teams.json";
@@ -80,6 +81,12 @@ export default function SihShortlistedPage() {
 
   const thirdPlaceTeam = useMemo(
     () => shortlistedTeams.find((t) => t.rank === "3rd"),
+    []
+  );
+
+  // Top 10 position teams (13 teams total due to 4-way 1st place tie)
+  const top10Teams = useMemo(
+    () => shortlistedTeams.slice(0, 13),
     []
   );
 
@@ -198,7 +205,7 @@ export default function SihShortlistedPage() {
       <section className="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-10 pb-24">
 
         {/* =========================================================
-            INTERNAL ROUND WINNERS SECTION (Minimal, Professional, 100vh height)
+            1. INTERNAL ROUND WINNERS SECTION (Top 3 Teams - 100vh height)
         ========================================================= */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -253,6 +260,33 @@ export default function SihShortlistedPage() {
                 <WinnerCard team={thirdPlaceTeam} index={1} rankType="3rd" />
               )}
             </div>
+          </div>
+        </motion.div>
+
+        {/* =========================================================
+            2. TOP 10 INTERNAL ROUND TEAMS SECTION (3-Col Grid, Orange/White/Green)
+        ========================================================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="w-full my-12 py-12 px-6 md:px-10 rounded-3xl border border-zinc-800 bg-zinc-950/80 backdrop-blur-xl"
+        >
+          {/* Header */}
+          <div className="mb-10 border-b border-zinc-800/80 pb-6">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+              Top 10 Internal Round Teams
+            </h2>
+            <p className="text-gray-400 text-sm md:text-base mt-2">
+              Top 10 position holders evaluated during the RGIT Internal Hackathon.
+            </p>
+          </div>
+
+          {/* 3-Column Grid for Top 10 Teams */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {top10Teams.map((team, idx) => (
+              <Top10TeamCard key={team.srNo} team={team} index={idx} />
+            ))}
           </div>
         </motion.div>
 
@@ -323,10 +357,9 @@ export default function SihShortlistedPage() {
                       relative h-12 px-5 rounded-xl text-xs md:text-sm font-semibold
                       whitespace-nowrap transition-all duration-300
                       flex items-center gap-2 border
-                      ${
-                        active
-                          ? `${activeClass} shadow-md`
-                          : "bg-black text-gray-400 border-zinc-800 hover:text-white hover:border-zinc-700"
+                      ${active
+                        ? `${activeClass} shadow-md`
+                        : "bg-black text-gray-400 border-zinc-800 hover:text-white hover:border-zinc-700"
                       }
                     `}
                   >
@@ -446,6 +479,28 @@ export default function SihShortlistedPage() {
             )}
           </AnimatePresence>
         </div>
+
+        {/* Motivational Banner for All Participating Teams */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative mt-12 overflow-hidden rounded-2xl border border-[#F26522]/30 bg-gradient-to-r from-[#F26522]/10 via-black to-[#00A651]/10 p-6 md:p-8 text-center backdrop-blur-xl"
+        >
+          <div className="flex items-center justify-center gap-2 text-[#F26522] text-xs uppercase tracking-[0.25em] font-bold mb-2">
+            {/* <Sparkles className="w-4 h-4 text-[#F26522]" /> */}
+            A Note to All Participants
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+            "Your journey doesn't end here — every line of code built is a stepping stone to your next breakthrough."
+          </h3>
+          <p className="mt-2 text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            To every team that participated: hackathons are about growth, resilience, and turning ideas into reality. Keep innovating, keep building, and come back stronger than ever! 🚀
+          </p>
+          <div className="mt-4 text-xs font-bold uppercase tracking-[0.25em] text-[#00A651]">
+            — From CESS & CodeCell —
+          </div>
+        </motion.div>
 
         {/* Bottom achievement banner */}
         <motion.div
@@ -569,6 +624,98 @@ function WinnerCard({
             <span
               className={`
                 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border
+                ${isSoftware
+                  ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
+                  : "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40"
+                }
+              `}
+            >
+              {team.category}
+            </span>
+          </div>
+
+          {/* Team Name */}
+          <h3 className={`text-base md:text-lg font-bold text-white tracking-tight leading-snug ${titleHover} transition-colors line-clamp-1`}>
+            {team.teamName}
+          </h3>
+        </div>
+
+        {/* Bottom Metadata: Leader on Left, Department on Right */}
+        <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center justify-between gap-4 text-xs">
+          <div className="min-w-0">
+            <span className="text-gray-500 text-[10px] uppercase font-bold tracking-wider block">Leader</span>
+            <span className="text-gray-200 font-medium truncate block">{team.leaderName}</span>
+          </div>
+
+          <div className="min-w-0 text-right">
+            <span className="text-gray-500 text-[10px] uppercase font-bold tracking-wider block">Dept</span>
+            <span className="text-gray-300 font-medium truncate block">{team.department}</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* =============================================================
+   TOP 10 TEAM CARD COMPONENT (3-Col Grid, Orange/White/Green)
+============================================================= */
+
+function Top10TeamCard({
+  team,
+  index,
+}: {
+  team: (typeof shortlistedTeams)[number];
+  index: number;
+}) {
+  const isSoftware = team.category === "Software";
+  const columnIndex = index % 3;
+
+  // Determine card border & accent colors based on column (Orange, White, Green)
+  let borderColor = "border-[#F26522]";
+  let rankBadgeStyle = "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40";
+  let titleHover = "group-hover:text-[#F26522]";
+
+  if (columnIndex === 1) {
+    // Column 2: White Border
+    borderColor = "border-white/80";
+    rankBadgeStyle = "bg-white/10 text-white border-white/40";
+    titleHover = "group-hover:text-white";
+  } else if (columnIndex === 2) {
+    // Column 3: Green Border
+    borderColor = "border-[#00A651]";
+    rankBadgeStyle = "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40";
+    titleHover = "group-hover:text-[#00A651]";
+  }
+
+  // Last team (13th team, index 12) centered in 3-column layout
+  const isLastCentered = index === 12;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.35, delay: Math.min(index * 0.03, 0.3) }}
+      whileHover={{ y: -4 }}
+      className={`group relative h-full ${isLastCentered ? "md:col-start-2" : ""}`}
+    >
+      <div
+        className={`
+          relative h-full rounded-xl border-2 ${borderColor} bg-[#0a0a0a]
+          p-5 flex flex-col justify-between transition-all duration-300
+        `}
+      >
+        <div>
+          {/* Top Line: Rank Badge on Left, Category on Right */}
+          <div className="flex items-center justify-between gap-2 mb-3">
+            <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border ${rankBadgeStyle}`}>
+              {team.rank ? `${team.rank} Place` : "Top 10"}
+            </span>
+
+            <span
+              className={`
+                text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border
                 ${
                   isSoftware
                     ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
@@ -681,10 +828,9 @@ function TeamCard({
             <span
               className={`
                 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border
-                ${
-                  isSoftware
-                    ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
-                    : "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40"
+                ${isSoftware
+                  ? "bg-[#00A651]/15 text-[#00A651] border-[#00A651]/40"
+                  : "bg-[#F26522]/15 text-[#F26522] border-[#F26522]/40"
                 }
               `}
             >
