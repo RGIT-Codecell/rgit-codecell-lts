@@ -1,402 +1,458 @@
 [
   {
     "srNo": 1,
-    "teamName": "Byte Busters",
-    "leaderName": "Aarav Sharma",
+    "teamName": "MATRIX",
+    "leaderName": "Khan Sameer",
     "psId": "SIH1601",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Information Technology",
+    "status": "shortlisted",
+    "rank": "1st"
   },
   {
     "srNo": 2,
-    "teamName": "Code Craft",
-    "leaderName": "Ananya Patel",
+    "teamName": "SYNTORY",
+    "leaderName": "Soham Mayekar",
     "psId": "SIH1602",
-    "category": "Software",
-    "department": "Information Technology"
+    "category": "Hardware",
+    "department": "Artificial Intelligence and Data Science",
+    "status": "shortlisted",
+    "rank": "1st"
   },
   {
     "srNo": 3,
-    "teamName": "Dev Dynamos",
-    "leaderName": "Rohan Verma",
-    "psId": "SIH1605",
+    "teamName": "Team Zenith Core",
+    "leaderName": "Krish Natekar",
+    "psId": "SIH1603",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted",
+    "rank": "1st"
   },
   {
     "srNo": 4,
-    "teamName": "Cyber Shield",
-    "leaderName": "Priya Singh",
-    "psId": "SIH1610",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "We Tried",
+    "leaderName": "Vedant Chalke",
+    "psId": "SIH1604",
+    "category": "Software",
+    "department": "Information Technology",
+    "status": "shortlisted",
+    "rank": "1st"
   },
   {
     "srNo": 5,
-    "teamName": "Quantum Leap",
-    "leaderName": "Aditya Kulkarni",
-    "psId": "SIH1612",
+    "teamName": "Error 404",
+    "leaderName": "Soumit Das",
+    "psId": "SIH1605",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Information Technology",
+    "status": "shortlisted",
+    "rank": "2nd"
   },
   {
     "srNo": 6,
-    "teamName": "Neural Ninjas",
-    "leaderName": "Sneha Deshmukh",
-    "psId": "SIH1615",
+    "teamName": "APEX",
+    "leaderName": "Rohan Rajkishor Choudhary",
+    "psId": "SIH1606",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Information Technology",
+    "status": "shortlisted",
+    "rank": "3rd"
   },
   {
     "srNo": 7,
-    "teamName": "Tech Titans",
-    "leaderName": "Vikram Joshi",
-    "psId": "SIH1618",
-    "category": "Hardware",
-    "department": "Mechanical"
+    "teamName": "Mind Nova",
+    "leaderName": "Suruchi Nagar",
+    "psId": "SIH1607",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 8,
-    "teamName": "AlgoRhythms",
-    "leaderName": "Isha Mehta",
-    "psId": "SIH1620",
-    "category": "Software",
-    "department": "Information Technology"
+    "teamName": "Singularity",
+    "leaderName": "Umed Nitin Indulkar",
+    "psId": "SIH1608",
+    "category": "Hardware",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 9,
-    "teamName": "Binary Bosses",
-    "leaderName": "Karan Nair",
-    "psId": "SIH1622",
+    "teamName": "GitItDone",
+    "leaderName": "Ayaan Memon",
+    "psId": "SIH1609",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 10,
-    "teamName": "Circuit Breakers",
-    "leaderName": "Tanvi Rao",
-    "psId": "SIH1625",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "POWERPUFF",
+    "leaderName": "Welder Umme Haani",
+    "psId": "SIH1610",
+    "category": "Software",
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 11,
-    "teamName": "Data Mavericks",
-    "leaderName": "Siddharth Gupta",
-    "psId": "SIH1628",
-    "category": "Software",
-    "department": "AIDS"
+    "teamName": "Team Ransom",
+    "leaderName": "Ketki Chavan",
+    "psId": "SIH1611",
+    "category": "Hardware",
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 12,
-    "teamName": "Logic Forge",
-    "leaderName": "Riya Shah",
-    "psId": "SIH1630",
+    "teamName": "Unexpected Output",
+    "leaderName": "Vedant Mahesh Malavade",
+    "psId": "SIH1612",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 13,
-    "teamName": "Cloud Catalysts",
-    "leaderName": "Yash Kapoor",
-    "psId": "SIH1632",
+    "teamName": "NEXUS",
+    "leaderName": "Durva Rane",
+    "psId": "SIH1613",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 14,
-    "teamName": "Robo Vanguard",
-    "leaderName": "Neha Kadam",
-    "psId": "SIH1635",
-    "category": "Hardware",
-    "department": "Mechanical"
+    "teamName": "Code Climbers",
+    "leaderName": "Madhav Toshniwal",
+    "psId": "SIH1614",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 15,
-    "teamName": "Pixel Pioneers",
-    "leaderName": "Varun Malhotra",
-    "psId": "SIH1638",
+    "teamName": "Claude's Plan",
+    "leaderName": "Vishal Barai",
+    "psId": "SIH1615",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 16,
-    "teamName": "Synapse Squad",
-    "leaderName": "Pooja Jadhav",
-    "psId": "SIH1640",
-    "category": "Software",
-    "department": "AIDS"
+    "teamName": "PhotoNEX",
+    "leaderName": "Pareet Mistry",
+    "psId": "SIH1616",
+    "category": "Hardware",
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 17,
-    "teamName": "Visionary Vanguards",
-    "leaderName": "Amit More",
-    "psId": "SIH1642",
-    "category": "Software",
-    "department": "Computer Engineering"
+    "teamName": "Code Blooded",
+    "leaderName": "Hasya Dhakle",
+    "psId": "SIH1617",
+    "category": "Hardware",
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 18,
-    "teamName": "Silicon Surge",
-    "leaderName": "Divya Sawant",
-    "psId": "SIH1645",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "IRIS-Dhiresh",
+    "leaderName": "Dhiresh Margaj",
+    "psId": "SIH1618",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 19,
-    "teamName": "Apex Architects",
-    "leaderName": "Pranav Shinde",
-    "psId": "SIH1648",
+    "teamName": "Rare Error",
+    "leaderName": "Pushkar potnis",
+    "psId": "SIH1619",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 20,
-    "teamName": "Helix Hackers",
-    "leaderName": "Anushka Thorat",
-    "psId": "SIH1650",
+    "teamName": "MAXIMUS",
+    "leaderName": "Prachi Kamble",
+    "psId": "SIH1620",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 21,
-    "teamName": "Matrix Mindsets",
-    "leaderName": "Rahul Saxena",
-    "psId": "SIH1653",
-    "category": "Software",
-    "department": "AIDS"
+    "teamName": "Sixth Sense",
+    "leaderName": "Krishnadev Ojha",
+    "psId": "SIH1621",
+    "category": "Hardware",
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 22,
-    "teamName": "Aero Innovators",
-    "leaderName": "Simran Kaur",
-    "psId": "SIH1655",
+    "teamName": "Invicta",
+    "leaderName": "Adwait Jadhav",
+    "psId": "SIH1622",
     "category": "Hardware",
-    "department": "Mechanical"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 23,
-    "teamName": "Infinite Loopers",
-    "leaderName": "Gaurav Agarwal",
-    "psId": "SIH1658",
+    "teamName": "Coding Saints",
+    "leaderName": "Aryan Samant",
+    "psId": "SIH1623",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 24,
-    "teamName": "Starlight Hackers",
-    "leaderName": "Shreya Hegde",
-    "psId": "SIH1660",
+    "teamName": "IRIS",
+    "leaderName": "Yug Chapherkar",
+    "psId": "SIH1624",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 25,
-    "teamName": "Ecotronic Labs",
-    "leaderName": "Manish Pandey",
-    "psId": "SIH1662",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "AlertX",
+    "leaderName": "Jay Vishwakarma",
+    "psId": "SIH1625",
+    "category": "Software",
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 26,
-    "teamName": "Cognitive Coders",
-    "leaderName": "Krutika Parab",
-    "psId": "SIH1665",
+    "teamName": "Cyvora",
+    "leaderName": "Arpita Sanrakshan Shelke",
+    "psId": "SIH1626",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 27,
-    "teamName": "Nexus Innovators",
-    "leaderName": "Harsh Vardhan",
-    "psId": "SIH1668",
+    "teamName": "MedNexus",
+    "leaderName": "Vaishnavi Dontha",
+    "psId": "SIH1627",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 28,
-    "teamName": "Robo Sparks",
-    "leaderName": "Aditi Patil",
-    "psId": "SIH1670",
-    "category": "Hardware",
-    "department": "Mechanical"
+    "teamName": "ShaolinCoder",
+    "leaderName": "Parth Gupta",
+    "psId": "SIH1628",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 29,
-    "teamName": "Web Wizards",
-    "leaderName": "Sanket Salunkhe",
-    "psId": "SIH1672",
+    "teamName": "HexaMind",
+    "leaderName": "Shreyas Sonar",
+    "psId": "SIH1629",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 30,
-    "teamName": "Stack Overlords",
-    "leaderName": "Mansi Chawla",
-    "psId": "SIH1675",
+    "teamName": "Binary Brains",
+    "leaderName": "Sarthak Jagdish Patil",
+    "psId": "SIH1630",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 31,
-    "teamName": "Deep Learning Crew",
-    "leaderName": "Tushar Bhatia",
-    "psId": "SIH1678",
+    "teamName": "Ember Sparks",
+    "leaderName": "Yashika Murli Tandle",
+    "psId": "SIH1631",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 32,
-    "teamName": "IoT Sentinel",
-    "leaderName": "Nisha Gawde",
-    "psId": "SIH1680",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "Bytex",
+    "leaderName": "Vihaan Agrawal",
+    "psId": "SIH1632",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 33,
-    "teamName": "Bug Hunters",
-    "leaderName": "Kushal Jain",
-    "psId": "SIH1682",
+    "teamName": "Recypher",
+    "leaderName": "Kabir Patel",
+    "psId": "SIH1633",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 34,
-    "teamName": "AgriTech Vision",
-    "leaderName": "Ruchi Phadke",
-    "psId": "SIH1685",
+    "teamName": "HexaHack",
+    "leaderName": "Aayushi Pawar",
+    "psId": "SIH1634",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Artificial Intelligence and Data Science",
+    "status": "shortlisted"
   },
   {
     "srNo": 35,
-    "teamName": "MedTech Alliance",
-    "leaderName": "Omkar Naik",
-    "psId": "SIH1688",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "Innoverse",
+    "leaderName": "Vedant Shelar",
+    "psId": "SIH1635",
+    "category": "Software",
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 36,
-    "teamName": "Hyperloop Hackers",
-    "leaderName": "Sanjana Kulkarni",
-    "psId": "SIH1690",
+    "teamName": "PDBVAL",
+    "leaderName": "Palak Shah",
+    "psId": "SIH1636",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Artificial Intelligence and Data Science",
+    "status": "shortlisted"
   },
   {
     "srNo": 37,
-    "teamName": "Cyber Knights",
-    "leaderName": "Abhishek Roy",
-    "psId": "SIH1692",
+    "teamName": "CyberSparks",
+    "leaderName": "Divyanshu Jha",
+    "psId": "SIH1637",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 38,
-    "teamName": "Smart Grid Guild",
-    "leaderName": "Trisha Solomon",
-    "psId": "SIH1695",
-    "category": "Hardware",
-    "department": "Mechanical"
+    "teamName": "The Insiders",
+    "leaderName": "Gaurang Ajgaonkar",
+    "psId": "SIH1638",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 39,
-    "teamName": "BlockCrafters",
-    "leaderName": "Kishore Bhosale",
-    "psId": "SIH1698",
-    "category": "Software",
-    "department": "Information Technology"
+    "teamName": "Kernel",
+    "leaderName": "Ravi Singh",
+    "psId": "SIH1639",
+    "category": "Hardware",
+    "department": "Mechanical",
+    "status": "shortlisted"
   },
   {
     "srNo": 40,
-    "teamName": "Omni Tech",
-    "leaderName": "Meera Sen",
-    "psId": "SIH1700",
+    "teamName": "CodeSentinel",
+    "leaderName": "Shravani Lingayat",
+    "psId": "SIH1640",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 41,
-    "teamName": "Zero Bug Squad",
-    "leaderName": "Chaitanya Dube",
-    "psId": "SIH1702",
+    "teamName": "Parallel Minds",
+    "leaderName": "Hisham Shaikh",
+    "psId": "SIH1641",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 42,
-    "teamName": "Automation Aces",
-    "leaderName": "Prachi Mahajan",
-    "psId": "SIH1705",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "Increvia",
+    "leaderName": "Adityaraj Panda",
+    "psId": "SIH1642",
+    "category": "Software",
+    "department": "Information Technology",
+    "status": "shortlisted"
   },
   {
     "srNo": 43,
-    "teamName": "Vision AI",
-    "leaderName": "Siddhesh Tawde",
-    "psId": "SIH1708",
+    "teamName": "Vasukee",
+    "leaderName": "Aarya Patil",
+    "psId": "SIH1643",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Computer Engineering",
+    "status": "shortlisted"
   },
   {
     "srNo": 44,
-    "teamName": "Eco Code Brigade",
-    "leaderName": "Bhavya Reddi",
-    "psId": "SIH1710",
+    "teamName": "CortexCrew",
+    "leaderName": "Atharva Dhakate",
+    "psId": "SIH1644",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Artificial Intelligence and Data Science",
+    "status": "shortlisted"
   },
   {
     "srNo": 45,
-    "teamName": "Solaris Tech",
-    "leaderName": "Nikhil Rane",
-    "psId": "SIH1712",
+    "teamName": "Team Electrocraft",
+    "leaderName": "Varad Pisolkar",
+    "psId": "SIH1645",
     "category": "Hardware",
-    "department": "Mechanical"
+    "department": "Electronics and Telecommunication",
+    "status": "shortlisted"
   },
   {
     "srNo": 46,
-    "teamName": "Dev Matrix",
-    "leaderName": "Sayali Gokhale",
-    "psId": "SIH1715",
+    "teamName": "Edumarg",
+    "leaderName": "Renesh Pawar",
+    "psId": "SIH1646",
     "category": "Software",
-    "department": "Information Technology"
+    "department": "Information Technology",
+    "status": "waiting"
   },
   {
     "srNo": 47,
-    "teamName": "Frontier Coders",
-    "leaderName": "Aakash Shetty",
-    "psId": "SIH1718",
-    "category": "Software",
-    "department": "Computer Engineering"
+    "teamName": "Big Potato Stuff",
+    "leaderName": "Atharva Kolhe",
+    "psId": "SIH1647",
+    "category": "Hardware",
+    "department": "Computer Engineering",
+    "status": "waiting"
   },
   {
     "srNo": 48,
-    "teamName": "Signal Processing Hub",
-    "leaderName": "Geeta Chaudhari",
-    "psId": "SIH1720",
-    "category": "Hardware",
-    "department": "EXTC"
+    "teamName": "Krushivikas",
+    "leaderName": "Aditya Bhagat",
+    "psId": "SIH1648",
+    "category": "Software",
+    "department": "Computer Engineering",
+    "status": "waiting"
   },
   {
     "srNo": 49,
-    "teamName": "Data Dynamites",
-    "leaderName": "Rudra Soni",
-    "psId": "SIH1722",
+    "teamName": "Ascending Heavens",
+    "leaderName": "Sarvesh Shinde",
+    "psId": "SIH1649",
     "category": "Software",
-    "department": "AIDS"
+    "department": "Artificial Intelligence and Data Science",
+    "status": "waiting"
   },
   {
     "srNo": 50,
-    "teamName": "Titanium Hackers",
-    "leaderName": "Vaishnavi Wagh",
-    "psId": "SIH1725",
+    "teamName": "Offbyone",
+    "leaderName": "Advait Subhash Tatkare",
+    "psId": "SIH1650",
     "category": "Software",
-    "department": "Computer Engineering"
+    "department": "Electronics and Telecommunication",
+    "status": "waiting"
   }
 ]
