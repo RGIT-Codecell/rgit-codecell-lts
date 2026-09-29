@@ -86,7 +86,7 @@ export const Team26_27: Team = {
         {
           name: "Shreya Heelesh",
           position: "Content & Editorial Secretary",
-          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787399379/Shreya-heelesh_iriirq.webp"
+          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1790684946/shreya_heelesh_uvyv3p.jpg"
         },
         {
           name: "Tanish Shinde",
