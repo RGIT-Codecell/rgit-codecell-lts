@@ -56,7 +56,7 @@ export const Team26_27: Team = {
         {
           name: "Rudra Dhuri",
           position: "Digital Creative Secretary",
-          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1750069181/Gargi_Hawaldar_uatxxe.jpg"
+          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1790680056/WhatsApp_Image_2026-09-27_at_21.42.55_rdo3az.jpg"
         },
         {
           name: "Bhumi Thale",
