@@ -51,7 +51,7 @@ export const Team25_26: Team = {
         {
             name: "Sarthak Avhad",
             position: "Jt. General Secretary",
-            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787394197/Sarthak_Avhad_svuo0m.jpg"
+            image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1790685722/Sarthak_Avhad_svuo0m_ej9uzp.jpg"
         },
         {
             name: "Vishal Barai",
