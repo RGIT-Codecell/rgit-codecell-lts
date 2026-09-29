@@ -26,7 +26,7 @@ export const Team26_27: Team = {
         {
           name: "Adit Halde",
           position: "Jt. General Secretary",
-          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1787394191/Adit_Halde_ewcw1c.jpg"
+          image: "https://res.cloudinary.com/dbsohsdkz/image/upload/v1790685874/Adit_Halde_xlfvhu.jpg"
         },
         {
           name: "Vivek Humbe",
