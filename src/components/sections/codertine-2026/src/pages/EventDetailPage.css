@@ -1,0 +1,490 @@
+.event-page {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* There is no global border-box reset, so every element here is content-box by
+   default. That makes an explicit `width` plus horizontal padding render WIDER
+   than the viewport (the 40px of section padding was added on top of `100%`),
+   and `.event-page { overflow: hidden }` then silently clipped the result
+   instead of letting it scroll. Scoping the reset to this page fixes every
+   container level without touching the rest of the site. */
+.event-page,
+.event-page *,
+.event-page *::before,
+.event-page *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Hero ---------- */
+
+.event-hero {
+  min-height: 62svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 110px 20px 60px;
+  background: rgba(3, 7, 20, 0.68);
+}
+
+.event-hero--missing {
+  min-height: 80svh;
+}
+
+.event-hero__inner {
+  width: min(100%, 900px);
+}
+
+.event-hero__top {
+  margin-bottom: 30px;
+}
+
+.event-hero__kicker {
+  margin-bottom: 16px;
+  overflow-wrap: break-word;
+}
+
+.event-hero h1 {
+  margin: 0;
+  font-size: clamp(53px, 7.5vw, 106px);
+  line-height: 1;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.event-hero__tagline {
+  max-width: 680px;
+  margin: 22px auto 0;
+  color: #b9c8e8;
+  font-size: clamp(17px, 1.8vw, 19px);
+  line-height: 1.8;
+}
+
+.event-hero--missing p {
+  max-width: 520px;
+  margin: 16px auto 0;
+  color: var(--ct-muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.event-hero--missing .module-button {
+  display: inline-block;
+  margin-top: 26px;
+}
+
+/* ---------- Divider ---------- */
+
+.event-divider {
+  width: min(100%, 1060px);
+  height: 2px;
+  margin: 0 auto;
+  background: var(--ct-royal);
+  box-shadow: 0 0 22px rgba(29, 78, 216, 0.5);
+}
+
+/* ---------- Sections ---------- */
+
+/* `width` now includes the padding, so 1100px = the previous 1060px content
+   measure + 2x20px padding. The divider above stays at 1060px so it still lines
+   up with this content edge at desktop. */
+.event-section {
+  width: min(100%, 1100px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 56px 20px 0;
+}
+
+/* ---------- Info grid ---------- */
+
+.event-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+/* Make the reveal wrapper a flex row so the card inside stretches to the full
+   row height instead of leaving uneven dead space under shorter cards. */
+.event-info-grid > .reveal,
+.event-split > .reveal {
+  display: flex;
+  min-width: 0;
+}
+
+.event-info-card {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 22px 20px;
+  border: 1px solid rgba(61, 139, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(11, 22, 54, 0.78);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow-wrap: break-word;
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.event-info-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(61, 139, 255, 0.45);
+}
+
+.event-info-card__label {
+  display: block;
+  color: var(--ct-electric);
+  font-family: "Unbounded", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.event-info-card__value {
+  display: block;
+  margin-top: 8px;
+  color: var(--ct-cream);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ---------- Split (People & Team / What it covers) ---------- */
+
+.event-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  text-align: left;
+}
+
+.event-block {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid rgba(61, 139, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(11, 22, 54, 0.8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow-wrap: break-word;
+}
+
+.event-block--wide {
+  text-align: center;
+}
+
+.event-list {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.event-list__item {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+  gap: 4px 14px;
+  align-items: baseline;
+  color: #b3c4e3;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.event-list__label {
+  color: var(--ct-muted);
+  font-family: "Unbounded", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.event-list__value {
+  color: var(--ct-cream);
+  font-weight: 600;
+}
+
+.event-bullets {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 13px;
+}
+
+.event-bullets li {
+  position: relative;
+  padding-left: 22px;
+  color: #b3c4e3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.event-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ct-royal);
+  box-shadow: 0 0 8px rgba(29, 78, 216, 0.6);
+}
+
+.event-purpose {
+  margin: 18px auto 0;
+  max-width: 720px;
+  color: #b3c4e3;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ---------- Key takeaway ---------- */
+
+.event-takeaway {
+  /* 828px = the previous 760px content box + 2x34px padding, so the desktop
+     card keeps exactly the same outer size now that width includes padding. */
+  width: min(100%, 828px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid rgba(61, 139, 255, 0.35);
+  border-radius: 22px;
+  background: rgba(13, 34, 90, 0.85);
+  box-shadow: 0 0 34px rgba(29, 78, 216, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.event-takeaway__body {
+  margin: 18px 0 0;
+  color: var(--ct-cream);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.event-takeaway__core-meta {
+  margin: 14px 0 0;
+  color: var(--ct-electric);
+  font-family: "Unbounded", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.event-takeaway__quote {
+  margin: 18px 0 0;
+  padding: 0;
+  color: var(--ct-azure);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+/* ---------- Debugging ladder ---------- */
+
+.event-ladder {
+  max-width: 600px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.event-ladder__label {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--ct-azure);
+  font-family: "Unbounded", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.event-ladder__steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.event-ladder__step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-ladder__chip {
+  padding: 7px 14px;
+  border: 1px solid rgba(61, 139, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(29, 78, 216, 0.18);
+  color: var(--ct-electric);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.event-ladder__arrow {
+  color: var(--ct-royal);
+  font-size: 17px;
+}
+
+/* ---------- Register ---------- */
+
+/* The section keeps the same measure as `.event-section` so the button lines up
+   with the card content above it. `justify-content: center` plus a `width` cap
+   means the button centers at any viewport and never forces a wider scroll
+   box than the page already has. */
+.event-register {
+  width: min(100%, 1100px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 56px 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.event-register__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* `max-width: 100%` + `min-width: 0` keeps a long label from overflowing the
+     padded container on very narrow phones. */
+  max-width: 100%;
+  min-height: 54px;
+  padding: 16px 44px;
+  border-radius: 14px;
+  color: white;
+  background: var(--ct-royal);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-register__button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(29, 78, 216, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.event-register__button:active {
+  transform: translateY(0);
+}
+
+/* ---------- Footer ---------- */
+
+.event-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 54px 20px 70px;
+  text-align: center;
+}
+
+.event-footer .reserve-back {
+  font-size: 15px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .event-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .event-split {
+    grid-template-columns: 1fr;
+  }
+
+  .event-section {
+    padding-top: 46px;
+  }
+}
+
+/* Go single-column at the tablet edge rather than at 640px, so a whole card is
+   always fully visible without sideways dragging on any 320-768px screen. */
+@media (max-width: 768px) {
+  .event-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* The label/value pair behaves like a two-column table row; stacking it
+     gives the value the full card width instead of sharing it with a
+     140px label column. */
+  .event-list__item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(61, 139, 255, 0.16);
+  }
+
+  .event-list__item:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .event-hero {
+    padding: 100px 20px 50px;
+    min-height: auto;
+  }
+
+  /* Match the section padding at this breakpoint and let the button fill the
+     available width, so it stays centered and tappable without overflowing. */
+  .event-register {
+    padding: 40px 16px 0;
+  }
+
+  .event-register__button {
+    width: 100%;
+    max-width: 340px;
+    padding: 15px 24px;
+    font-size: 15px;
+  }
+
+  /* Unbounded is a wide face; at the desktop clamp an uppercase title such as
+     "ENGINEERING" overflows the viewport on phones and gets clipped. */
+  .event-hero h1 {
+    font-size: clamp(30px, 7.6vw, 44px);
+    letter-spacing: -1.5px;
+  }
+
+  .event-block {
+    padding: 24px 20px;
+  }
+
+  .event-takeaway {
+    padding: 26px 20px;
+    margin: 0 auto;
+  }
+
+  .event-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-info-card {
+    transition: none;
+  }
+}
