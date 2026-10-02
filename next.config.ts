@@ -34,11 +34,11 @@ const nextConfig: NextConfig = {
     return [
 {
 source: "/codertine-26",
-destination: "https://codertine.vercel.app/",
+destination: "https://codertine.vercel.app/#/",
 },
 {
 source: "/codertine-26/:path*",
-destination: "https://codertine.vercel.app/:path*",
+destination: "https://codertine.vercel.app/#/:path*",
 },
 ];
 },
