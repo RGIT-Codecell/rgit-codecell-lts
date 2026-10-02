@@ -43,5 +43,4 @@ destination: "https://codertine.vercel.app/:path*",
 ];
 },
 };
-
 export default nextConfig;
