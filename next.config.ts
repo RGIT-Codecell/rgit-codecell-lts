@@ -30,6 +30,18 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+{
+source: "/codertine-26",
+destination: "https://codertine.vercel.app/",
+  },
+{
+source: "/codertine-26/*",
+destination: "https://codertine.vercel.app/*",
+  },
+];
+},
 };
 
 export default nextConfig;
