@@ -1,0 +1,102 @@
+.chapter-nav {
+  position: fixed;
+  z-index: 6;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* The rail floats over the right gutter; keep it from swallowing clicks on
+     page content that happens to sit underneath it. */
+  pointer-events: none;
+}
+
+.chapter-nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 14px 6px;
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(61, 139, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(6, 12, 30, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+}
+
+.chapter-nav__dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(61, 139, 255, 0.55);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chapter-nav__dot:hover {
+  background: rgba(61, 139, 255, 0.45);
+  transform: scale(1.25);
+}
+
+.chapter-nav__dot[aria-current="true"] {
+  background: #3d8bff;
+  box-shadow: 0 0 12px rgba(61, 139, 255, 0.7);
+}
+
+.chapter-nav__label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 12px);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 5px 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(61, 139, 255, 0.24);
+  background: rgba(6, 12, 30, 0.9);
+  color: var(--ct-cream);
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.chapter-nav__dot:hover .chapter-nav__label,
+.chapter-nav__dot[aria-current="true"] .chapter-nav__label {
+  opacity: 1;
+}
+
+.chapter-nav__dot:focus-visible {
+  outline: 2px solid #7fb2ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .chapter-nav {
+    right: 6px;
+  }
+
+  .chapter-nav ol {
+    gap: 12px;
+    padding: 10px 5px;
+  }
+
+  .chapter-nav__dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .chapter-nav__label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-nav__dot,
+  .chapter-nav__label {
+    transition: none;
+  }
+}
