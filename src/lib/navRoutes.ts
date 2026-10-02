@@ -12,7 +12,7 @@ export const ROUTES: Route[] = [
     { path: '/founders', name: 'Founders' },
     // { path: '/recursion', name: 'Recursion 6.0' },
     // { path: '/sih-2026', name: 'SIH 2026' },
-    { path: '/codertine-26/app', name: 'Codertine 7.0' },
+    { path: '/codertine-26/main', name: 'Codertine 7.0' },
     // { path: '/recursion-2026', name: 'Recursion 7.0' },
 
 ]
