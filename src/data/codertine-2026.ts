@@ -87,7 +87,7 @@ export const CODERTINE_MODULES: CodertineModule[] = [
     day: "Monday",
     date: "October 5, 2026",
     dateBadge: "5th Oct",
-    time: "2:15 AM onwards",
+    time: "10:30 AM onwards",
     venue: "Lab B-11",
     mode: "In-Person Hands-on Workshop",
     format: "2-Hour Interactive Workshop",
