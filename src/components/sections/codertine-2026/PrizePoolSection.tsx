@@ -64,7 +64,7 @@ export default function PrizePoolSection() {
               </div>
 
               <span className="text-xs font-semibold text-[#80f7ff] mb-4">
-                Cash Award Per Event
+                Cash + Voucher Award Per Event
               </span>
 
               <div className="w-full pt-4 border-t border-[#003842] text-xs text-[#b2ebf2] space-y-2 text-left">
