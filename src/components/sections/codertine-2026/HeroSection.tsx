@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Terminal, Calendar, MapPin, Trophy, Clock } from "lucide-react";
 import Link from "next/link";
@@ -43,6 +44,12 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[100vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 pb-20 overflow-hidden bg-[#001317]">
+     <Image
+      src="/images/codertine/IIC.jpeg"
+      alt="Hero Image"
+      width={200}
+      height={200}
+     />
       {/* Dynamic Background Atmosphere - Styled exactly like the Poster */}
       <div className="absolute inset-0 pointer-events-none">
         <div
