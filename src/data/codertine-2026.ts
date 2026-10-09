@@ -93,7 +93,7 @@ export const CODERTINE_MODULES: CodertineModule[] = [
     format: "2-Hour Interactive Workshop",
     type: "workshop",
     price: "FREE",
-    speaker: "Razeen Sayyed",
+    speaker: " Mohammed Razeen Sayyed",
     speakerTitle: "GTM Strategist | AI Entrepreneur · AI • Automation • Digital Growth",
     leads: "Tanish, Vishal, Krutika, Yug & Janvi",
     queryContacts: [
@@ -259,7 +259,7 @@ export const CODERTINE_MODULES: CodertineModule[] = [
     day: "Wednesday",
     date: "October 7, 2026",
     dateBadge: "7th Oct",
-    time: "10:00 AM onwards",
+    time: "10:00 AM – 3:30 PM",
     venue: "Seminar Hall",
     mode: "In-Person Tournament",
     format: "Multi-Round Competitive Debugging Tournament",
